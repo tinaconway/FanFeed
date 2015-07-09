@@ -1,8 +1,16 @@
+$red: #AC0000;
+$white: #FFFFFF;
+$lightBlue: #C8D3E6;
+$mediumBlue: #657FAD;
+$darkBlue: #002566;
+$text: #666666;
+$border: #a3a3a3;
+
 @import "partials/auth";
 
 body {
   font-family: 'Open Sans', sans-serif;
-  background: #e4e7ec;
+  background: $darkBlue;
 }
 
 h1, h2, h3, h4, h5, h6 {
