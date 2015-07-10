@@ -228,6 +228,76 @@ a {
 }
 
 /*********************
+  * places page
+  *********************/
+
+  .individualPlaceList {
+    background-color: white;
+    border: 2px solid;
+    border-color: #AC0000;
+    width: 1420px;
+    border-style: groove;
+    border-radius: 5px;
+    margin-left: -140px;
+    margin-top: 10px;
+  }
+
+  .info {
+    margin-top: -140px;
+    margin-left: 200px;
+  }
+
+  .details {
+    float: right;
+    margin-right: 100px;
+    vertical-align: text-bottom;
+    width: 100px;
+    height: 50px;
+    color: white;
+    background-color: #AC0000;
+    transition: .5s;
+    border-radius: 5px;
+  }
+
+  .details:hover {
+    color: #AC0000;
+    background-color: white;
+    transition: .5s;
+  }
+
+  .address, .rating {
+    color: #002566;
+    display: inline-block;
+    font-size: 30px;
+    margin-left: 50px;
+    margin-bottom: 100px;
+  }
+
+  .addToFavorites {
+    color: #002566;
+    margin-left: 55px;
+    font-size: 20px;
+    display: block;
+  }
+
+  .placeContainer {
+    margin-left: 20px;
+  }
+
+  .placeContainer img {
+    height: 200px;
+    width: 200px;
+    border-radius: 5px;
+  }
+
+  .individualPlace {
+    text-align: center;
+    color: #002566;
+    font-size: 30px;
+    margin-left: 20px;
+  }
+
+/*********************
 * Social Buttons
 *********************/
 
