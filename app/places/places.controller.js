@@ -4,7 +4,6 @@
 
 angular.module('places')
   .controller('PlacesController', function($scope, $auth, $alert, Account) {
-<<<<<<< HEAD
     $scope.map = {
       center: {
         latitude: 45,
