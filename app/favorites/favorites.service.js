@@ -16,8 +16,8 @@
     };
 
     var getFavorite = function (id) {
-      return $http.get(url + '/' + id)
-    }
+      return $http.get(url + '/' + id);
+    };
 
     return {
       addFavorite: addFavorite,
