@@ -3,8 +3,6 @@
 angular.module('places', [
   'ngRoute',
   'uiGmapgoogle-maps'
-
-
 ])
 
 .config(function($routeProvider) {
