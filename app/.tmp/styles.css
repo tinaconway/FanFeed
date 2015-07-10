@@ -226,6 +226,10 @@ a {
   font-size: 20px;
   display: block; }
 
+.addToFavorites:hover {
+  text-decoration: none;
+  color: #AC0000; }
+
 .placeContainer {
   margin-left: 20px; }
 
