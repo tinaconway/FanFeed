@@ -7,4 +7,10 @@ angular.module('places')
     $scope.map = { center: { latitude: 32.7833, longitude: -79.931051 }, zoom: 8 };
 
   });
+
+  .controller('CollapseCtrl', function($scope) {
+    $scope.isCollapsed = false;
+  });
+
+  
 })();

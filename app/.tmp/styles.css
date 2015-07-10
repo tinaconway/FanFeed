@@ -240,6 +240,89 @@ a {
   margin-left: 20px; }
 
 /*********************
+* Details page
+*********************/
+.individualPlaceDetails {
+  background-color: white;
+  border: 2px solid;
+  border-color: #AC0000;
+  width: 1420px;
+  border-style: groove;
+  border-radius: 5px;
+  margin-left: -140px;
+  margin-top: 10px; }
+
+.placeDetailContainer {
+  margin-left: 20px; }
+
+.placeDetailContainer img {
+  height: 400px;
+  width: 400px;
+  border-radius: 5px; }
+
+.detailsAddress, .detailsContact, .detailsHoursOfOperation, .detailsHappyHours {
+  color: #002566; }
+
+.individualPlaceDetailTitle {
+  color: #002566;
+  font-size: 40px;
+  margin-left: 20px; }
+
+.detailsRating {
+  font-size: 25px;
+  margin-left: 150px;
+  color: #002566; }
+
+.addToFavorites {
+  color: #002566;
+  font-size: 25px;
+  margin-left: 135px; }
+
+.addToFavorites:hover {
+  text-decoration: none;
+  color: #AC0000; }
+
+.detailsInfo {
+  margin-top: -400px;
+  margin-left: 200px;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 200px; }
+
+.detailsWebsiteLink {
+  color: #002566; }
+
+.detailsWebsiteLink:hover {
+  text-decoration: none;
+  color: #AC0000; }
+
+/*********************
+* Reviews Section
+*********************/
+.reviewsContainer {
+  border-top: 2px solid;
+  border-color: #AC0000;
+  width: 1420px;
+  border-style: groove;
+  margin-left: -140px;
+  margin-top: 10px; }
+
+.individualReview {
+  background-color: white;
+  border: 2px solid;
+  border-color: #AC0000;
+  border-style: groove;
+  border-radius: 5px;
+  margin-left: 30px;
+  margin-top: 10px; }
+
+.allReviews {
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  margin-top: 10px; }
+
+/*********************
 * Social Buttons
 *********************/
 .btn-google-plus {
