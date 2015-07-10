@@ -8,9 +8,5 @@ angular.module('places')
 
   });
 
-  .controller('CollapseCtrl', function($scope) {
-    $scope.isCollapsed = false;
-  });
 
-  
 })();

@@ -4,7 +4,7 @@
     <div class="placeDetailContainer">
         <img ng-src="http://baystreetbiergarten.com/wp-content/themes/baystreetbiergarten/-/img/logo.png" alt="" />
         <div class="detailsRating">&#10025 3.4</div>
-        <a href="#/favorites" class="addToFavorites" ng-click="addPlace(place)">Add to &#9825</a>
+        <a href="#/favorites" class="addToDetailsFavorites" ng-click="addPlace(place)">Add to &#9825</a>
     </div>
     <div class="detailsInfo">
         <div class="detailsAddress">Address: 549 E Bay St, Charleston, SC 29403</div>
@@ -14,17 +14,13 @@
         <a href="http://baystreetbiergarten.com/" class="detailsWebsiteLink">Visit the Website</a>
     </div>
   </div>
-  <div ng-controller="CollapseCtrl">
-  	<button class="btn btn-default" ng-click="isCollapsed = !isCollapsed">Reviews </button>
-  	<hr>
-  	<div collapse="isCollapsed">
-  		<div class="well well-lg">Some content</div>
-  	</div>
-  </div>
   <div class="reviewsContainer">
+    <div class="reviews">Reviews</div>
       <div class="col-md-6">
+        <div class="barsReviews">Bars and Stripes</div>
         <div class="form">
-          <input type="text" row="40" cols="10">
+          <textarea name="reviewsForm" rows="5" cols="95" placeholder=" What'd you think?"></textarea>
+          <input class="submit" type="submit" value="Post">
         </div>
       </div>
       <div class="col-md-6">

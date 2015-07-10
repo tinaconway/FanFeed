@@ -273,12 +273,12 @@ a {
   margin-left: 150px;
   color: #002566; }
 
-.addToFavorites {
+.addToDetailsFavorites {
   color: #002566;
   font-size: 25px;
   margin-left: 135px; }
 
-.addToFavorites:hover {
+.addToDetailsFavorites:hover {
   text-decoration: none;
   color: #AC0000; }
 
@@ -316,11 +316,31 @@ a {
   margin-left: 30px;
   margin-top: 10px; }
 
-.allReviews {
+.allReviews, .barsReviews {
   font-size: 20px;
   color: white;
   text-align: center;
   margin-top: 10px; }
+
+.reviews {
+  font-size: 40px;
+  color: white;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px; }
+
+textarea {
+  resize: none;
+  border-radius: 5px;
+  border-color: #AC0000;
+  margin-top: 10px; }
+
+.submit {
+  border-radius: 5px;
+  border-color: #AC0000;
+  background-color: white;
+  color: #002566;
+  width: 50px; }
 
 /*********************
 * Social Buttons
