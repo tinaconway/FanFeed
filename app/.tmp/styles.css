@@ -209,8 +209,9 @@ a {
 .details:hover {
   color: #AC0000;
   background-color: white;
-  -webkit-transition: .5s;
-          transition: .5s; }
+  -webkit-transition: .4s;
+          transition: .4s;
+  border: none; }
 
 .address, .rating {
   color: #002566;
@@ -295,6 +296,26 @@ a {
 .detailsWebsiteLink:hover {
   text-decoration: none;
   color: #AC0000; }
+
+.backToPlaces {
+  float: right;
+  margin-right: 100px;
+  margin-top: 20px;
+  vertical-align: text-bottom;
+  width: 100px;
+  height: 50px;
+  color: white;
+  background-color: #AC0000;
+  -webkit-transition: .5s;
+          transition: .5s;
+  border-radius: 5px; }
+
+.backToPlaces:hover {
+  color: #AC0000;
+  background-color: white;
+  -webkit-transition: .4s;
+          transition: .4s;
+  border: none; }
 
 /*********************
 * Reviews Section
