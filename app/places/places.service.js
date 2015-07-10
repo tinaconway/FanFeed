@@ -5,5 +5,6 @@
 angular.module('places')
   .factory('PlaceService', function($http) {
 
+
   });
 })();
