@@ -1,4 +1,13 @@
-<ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
+<script type="text/ng-template" id="searchbox.tpl.html">
+    <input type="text" placeholder="Search" size="50" style="font-size: 16px;">
+</script>
+
+
+
+<ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true">
+    <ui-gmap-search-box template="searchbox.template" events="searchbox.events" position="BOTTOM_RIGHT"></ui-gmap-search-box>
+    <ui-gmap-marker coords="marker.coords" options="marker.options" events="marker.events" idkey="marker.id">
+</ui-gmap-google-map>
 
 
 <div class="container">
