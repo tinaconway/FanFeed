@@ -3,42 +3,98 @@ $white: #FFFFFF;
 $lightBlue: #C8D3E6;
 $mediumBlue: #657FAD;
 $darkBlue: #002566;
-$text: #666666;
+$text: #333333;
 $border: #a3a3a3;
 
+@font-face {
+    font-family: CustomFont;
+    src: url('../fonts/Freebooter-Script/freebooterscript.ttf');
+}
+
 @import "partials/auth";
+@import "partials/header";
+
+@mixin submitButton {
+    background-color: $red;
+    font-size: 3vmax;
+    color: $white;
+    border: 3px solid $border;
+    font-family: CustomFont;
+    border-radius: 5px;
+    &:hover{
+      border-color: $darkBlue;
+      background-color: $white;
+      color: $red;
+      transition: ease .3s;
+    }
+  }
+
+html {
+  background:  linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('../Images/American-Flag-in-the-Sun.jpg') no-repeat no-repeat;
+  background-size: 100% 800px;
+  position: fixed;
+  width: 100%;
+}
 
 body {
-  font-family: 'Open Sans', sans-serif;
-  background: $darkBlue;
+  font-family: CustomFont;
+  color: $text;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: CustomFont;
   font-weight: bold;
 }
 
 a {
-  color: #000;
+  /* color: #000; */
 }
 
 .text-muted {
-  color: $text;
+  color: $white;
 }
 
 .navbar {
   border: 0;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26);
+  font-size: 2vmax;
+  background-color: $red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 .navbar-header {
-  float: left;
   padding-left: 15px;
+  background-color: $darkBlue;
+  width: 30%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: $red;
+  font-size: 2vmax;
+  color: $white;
+  font-family: CustomFont;
+
 }
 
 .navbar-nav {
   float: left;
   margin: 0;
+  display: flex;
+  align-items: center;
+  background-color: $red;
+
+
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: $text;
+    &:hover {
+      color: $white;
+      transition: ease .25s;
+    }
 }
 
 .navbar-nav > li {
@@ -46,17 +102,17 @@ a {
 }
 
 .navbar-nav > li > a {
-  padding: 15px;
+  /* padding: 15px; */
+  color: $text;
 }
 
 .navbar-default {
   color: $text;
-  background: #fff;
 }
 
 .navbar-default .navbar-brand {
-  color: $white;
-  background-color: $red;
+  color: $text;
+  margin: 3%;
 }
 
 .navbar-default .navbar-brand:hover {
@@ -64,9 +120,26 @@ a {
   background-color: #fff;
 }
 
-.navbar-brand {
-  margin-left: -15px;
-  transition: 0.25s all;
+.brandWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 15px;
+  width: 100%;
+  height: 80%;
+  border-radius: 2px;
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -15px;
+    transition: 0.25s all;
+    float: none;
+    padding: 0;
+    font-size: 2vmax;
+    width:100%;
+    height: 100%;
+  }
 }
 
 .panel {
@@ -172,15 +245,16 @@ a {
 .btn {
   font-weight: bold;
   border-radius: 2px;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26);
+  /* box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26); */
+  @include submitButton;
 }
 
 .btn-primary {
-  background-color: #4285f4;
+  /* background-color: #4285f4; */
 }
 
 .btn-primary:hover {
-  background-color: #3367d6;
+  /* background-color: #3367d6; */
 }
 
 .btn-success {
