@@ -54,5 +54,6 @@ angular.module('places')
       getBars: getBars
     };
 
+
   });
 })();
