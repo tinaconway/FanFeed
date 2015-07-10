@@ -6,15 +6,35 @@ $darkBlue: #002566;
 $text: #666666;
 $border: #a3a3a3;
 
+@font-face {
+    font-family: CustomFont;
+    src: url('fonts/Freebooter-Script/freebooterscript.ttf');
+}
+
 @import "partials/auth";
 
+@mixin submitButton {
+    background-color: $red;
+    font-size: 2vmax;
+    color: $white;
+    border: 3px solid $border;
+    font-family: CustomFont;
+    border-radius: 5px;
+    &:hover{
+      border-color: $darkBlue;
+      background-color: $white;
+      color: $red;
+      transition: ease .3s;
+    }
+  }
+
 body {
-  font-family: 'Open Sans', sans-serif;
-  background: $darkBlue;
+  font-family: CustomFont;
+  background: url(app/Images/American-Flag-in-the-Sun.jpg) no-repeat no-repeat;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: CustomFont;
   font-weight: bold;
 }
 
@@ -172,15 +192,16 @@ a {
 .btn {
   font-weight: bold;
   border-radius: 2px;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26);
+  /* box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26); */
+  @include submitButton;
 }
 
 .btn-primary {
-  background-color: #4285f4;
+  /* background-color: #4285f4; */
 }
 
 .btn-primary:hover {
-  background-color: #3367d6;
+  /* background-color: #3367d6; */
 }
 
 .btn-success {
