@@ -1,6 +1,9 @@
 @font-face {
-  font-family: CustomFont;
+  font-family: ScriptFont;
   src: url("../fonts/Freebooter-Script/freebooterscript.ttf"); }
+@font-face {
+  font-family: BoldFont;
+  src: url("../fonts/aleo/Aleo-Bold.otf"); }
 .beerpin {
   width: 70px;
   height: 70px;
@@ -27,19 +30,22 @@
           justify-content: center; }
 
 html {
+  /* background:  linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('../Images/American-Flag-in-the-Sun.jpg') no-repeat no-repeat;
+  background-size: 100% 800px;
+  position: fixed;
+  width: 100%; */ }
+
+body {
+  color: #333333;
   background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("../Images/American-Flag-in-the-Sun.jpg") no-repeat no-repeat;
   background: linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("../Images/American-Flag-in-the-Sun.jpg") no-repeat no-repeat;
   background-size: 100% 800px;
   position: fixed;
   width: 100%; }
 
-body {
-  font-family: CustomFont;
-  color: #333333; }
-
 h1, h2, h3, h4, h5, h6 {
-  font-family: CustomFont;
-  font-weight: bold; }
+  font-weight: bold;
+  font-family: BoldFont; }
 
 a {
   /* color: #000; */ }
@@ -64,7 +70,8 @@ a {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100%; }
+  height: 100%;
+  font-family: ScriptFont; }
 
 .navbar-header {
   padding-left: 15px;
@@ -85,7 +92,7 @@ a {
   background-color: #AC0000;
   font-size: 2vmax;
   color: #FFFFFF;
-  font-family: CustomFont; }
+  font-family: ScriptFont; }
 
 .navbar-nav {
   float: left;
@@ -253,19 +260,7 @@ a {
 .btn {
   font-weight: bold;
   border-radius: 2px;
-  /* box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26); */
-  background-color: #AC0000;
-  font-size: 3vmax;
-  color: #FFFFFF;
-  border: 3px solid #a3a3a3;
-  font-family: CustomFont;
-  border-radius: 5px; }
-  .btn:hover {
-    border-color: #002566;
-    background-color: #FFFFFF;
-    color: #AC0000;
-    -webkit-transition: ease .3s;
-            transition: ease .3s; }
+  /* box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26); */ }
 
 .btn-primary {
   /* background-color: #4285f4; */ }
@@ -305,6 +300,196 @@ a {
 
 .btn .fa {
   margin-right: 5px; }
+
+/*********************
+  * places page
+  *********************/
+.individualPlaceList {
+  background-color: white;
+  border: 2px solid;
+  border-color: #AC0000;
+  width: 1420px;
+  border-style: groove;
+  border-radius: 5px;
+  margin-left: -140px;
+  margin-top: 10px; }
+
+.info {
+  margin-top: -140px;
+  margin-left: 200px; }
+
+.details {
+  float: right;
+  margin-right: 100px;
+  vertical-align: text-bottom;
+  width: 100px;
+  height: 50px;
+  color: white;
+  background-color: #AC0000;
+  -webkit-transition: .5s;
+          transition: .5s;
+  border-radius: 5px; }
+
+.details:hover {
+  color: #AC0000;
+  background-color: white;
+  -webkit-transition: .4s;
+          transition: .4s;
+  border: none; }
+
+.address, .rating {
+  color: #002566;
+  display: inline-block;
+  font-size: 30px;
+  margin-left: 50px;
+  margin-bottom: 100px; }
+
+.addToFavorites {
+  color: #002566;
+  margin-left: 55px;
+  font-size: 20px;
+  display: block; }
+
+.addToFavorites:hover {
+  text-decoration: none;
+  color: #AC0000; }
+
+.placeContainer {
+  margin-left: 20px; }
+
+.placeContainer img {
+  height: 200px;
+  width: 200px;
+  border-radius: 5px; }
+
+.individualPlace {
+  text-align: center;
+  color: #002566;
+  font-size: 30px;
+  margin-left: 20px; }
+
+/*********************
+* Details page
+*********************/
+.individualPlaceDetails {
+  background-color: white;
+  border: 2px solid;
+  border-color: #AC0000;
+  width: 1420px;
+  border-style: groove;
+  border-radius: 5px;
+  margin-left: -140px;
+  margin-top: 10px; }
+
+.placeDetailContainer {
+  margin-left: 20px; }
+
+.placeDetailContainer img {
+  height: 400px;
+  width: 400px;
+  border-radius: 5px; }
+
+.detailsAddress, .detailsContact, .detailsHoursOfOperation, .detailsHappyHours {
+  color: #002566; }
+
+.individualPlaceDetailTitle {
+  color: #002566;
+  font-size: 40px;
+  margin-left: 20px; }
+
+.detailsRating {
+  font-size: 25px;
+  margin-left: 150px;
+  color: #002566; }
+
+.addToDetailsFavorites {
+  color: #002566;
+  font-size: 25px;
+  margin-left: 135px; }
+
+.addToDetailsFavorites:hover {
+  text-decoration: none;
+  color: #AC0000; }
+
+.detailsInfo {
+  margin-top: -400px;
+  margin-left: 200px;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 200px; }
+
+.detailsWebsiteLink {
+  color: #002566; }
+
+.detailsWebsiteLink:hover {
+  text-decoration: none;
+  color: #AC0000; }
+
+.backToPlaces {
+  float: right;
+  margin-right: 100px;
+  margin-top: 20px;
+  vertical-align: text-bottom;
+  width: 100px;
+  height: 50px;
+  color: white;
+  background-color: #AC0000;
+  -webkit-transition: .5s;
+          transition: .5s;
+  border-radius: 5px; }
+
+.backToPlaces:hover {
+  color: #AC0000;
+  background-color: white;
+  -webkit-transition: .4s;
+          transition: .4s;
+  border: none; }
+
+/*********************
+* Reviews Section
+*********************/
+.reviewsContainer {
+  border-top: 2px solid;
+  border-color: #AC0000;
+  width: 1420px;
+  border-style: groove;
+  margin-left: -140px;
+  margin-top: 10px; }
+
+.individualReview {
+  background-color: white;
+  border: 2px solid;
+  border-color: #AC0000;
+  border-style: groove;
+  border-radius: 5px;
+  margin-left: 30px;
+  margin-top: 10px; }
+
+.allReviews, .barsReviews {
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  margin-top: 10px; }
+
+.reviews {
+  font-size: 40px;
+  color: white;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px; }
+
+textarea {
+  resize: none;
+  border-radius: 5px;
+  border-color: #AC0000;
+  margin-top: 10px; }
+
+.submit {
+  border-radius: 5px;
+  border-color: #AC0000;
+  background-color: white;
+  color: #002566;
+  width: 50px; }
 
 /*********************
 * Social Buttons
