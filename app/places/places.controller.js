@@ -3,7 +3,7 @@
 
 
 angular.module('places')
-  .controller('PlacesController', function($scope, $auth, $alert, Account, PlaceService) {
+  .controller('PlacesController', function($scope, $auth, $alert, Account, PlaceService, $routeParams) {
     $scope.map = {
         "center": {
             "latitude": 32.7833,
@@ -43,20 +43,27 @@ angular.module('places')
               $scope.places = data;
 
             });
-            $scope.map = {
-                "center": {
-                    "latitude": place[0].geometry.location.lat(),
-                    "longitude": place[0].geometry.location.lng()
-                },
-                "zoom": 18
-            };
-            $scope.marker = {
-                id: 0,
-                coords: {
-                    latitude: place[0].geometry.location.lat(),
-                    longitude: place[0].geometry.location.lng()
-                }
-            };
+            if($routeParams.placeId) {
+              PlaceService.getSingleBar($routeParams.placeId).then(function(listing) {
+              // console.log(listing);
+              // $scope.place = listing;
+              });
+            }
+
+            // $scope.map = {
+            //     "center": {
+            //         "latitude": place[0].geometry.location.lat(),
+            //         "longitude": place[0].geometry.location.lng()
+            //     },
+            //     "zoom": 18
+            // };
+            // $scope.marker = {
+            //     id: 0,
+            //     coords: {
+            //         latitude: place[0].geometry.location.lat(),
+            //         longitude: place[0].geometry.location.lng()
+            //     }
+            // };
 
         }
     };
