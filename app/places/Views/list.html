@@ -16,12 +16,17 @@
     </div> -->
   <div class="places">
   <article class="place" ng-repeat="place in places" data-id="{{place.id}}">
-      <div class="individualPlaceList">
-          <a class="individualPlace" href="#/places/detail/{{place.id}}">{{place.name}}</a>
-        <div class="placeContainer">
-            <img ng-src="http://baystreetbiergarten.com/wp-content/themes/baystreetbiergarten/-/img/logo.png" alt="" />
-            <a href="#/favorites" class="addToFavorites" ng-click="addPlace(place)">Add to &#9825</a>
-        </div>
+
+        <div class="individualPlaceList">
+          <div class="imageTitleWrapper">
+          <div class="placeContainer">
+              <img ng-src="{{place.photo[0].html_attributions}}" alt="" />
+            <div class="titleHeartWrapper">
+              <a id ="placeTitle" class="individualPlace" href="#/places/detail/{{place.id}}">{{place.name}}</a>
+              <a href="#/favorites" class="addToFavorites" ng-click="addPlace(place)">Add to &#9825</a>
+            </div>
+          </div>
+          </div>
         <div class="info">
           <div class="address">{{place.address}}</div>
           <div class="rating">&#10025 3.4</div>

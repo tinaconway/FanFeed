@@ -14,7 +14,7 @@ angular.module('MyApp', [
 .config(function($routeProvider) {
   $routeProvider
     .when('/', {
-      templateUrl: 'places/views/list.html'
+      templateUrl: 'places/views/list.html',
       controller: 'PlacesController'
     })
     .when('/404', {

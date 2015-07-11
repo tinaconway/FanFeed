@@ -310,33 +310,60 @@ a {
 /*********************
   * places page
   *********************/
+.place {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
 
+.imageTitleWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 40%
+}
   .individualPlaceList {
-    background-color: white;
+    background:  linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Images/oldpaperbackground.gif') no-repeat no-repeat;
+    background-size: 100%;
     border: 2px solid;
     border-color: #AC0000;
-    width: 1420px;
+    width: 100%;
     border-style: groove;
     border-radius: 5px;
-    margin-left: -140px;
-    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 2%;
+    .titleHeartWrapper {
+      width: 50%;
+      text-align: center;
+      #placeTitle {
+        width: 100%;
+        font-family: ScriptFont;
+        text-align: left;
+        margin: 2%;
+
+      }
+    }
   }
 
   .info {
-    margin-top: -140px;
-    margin-left: 200px;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .details {
     float: right;
-    margin-right: 100px;
     vertical-align: text-bottom;
-    width: 100px;
-    height: 50px;
+    width: 100%;
     color: white;
     background-color: #AC0000;
     transition: .5s;
     border-radius: 5px;
+    font-size: 2vmax;
   }
 
   .details:hover {
@@ -350,15 +377,14 @@ a {
     color: #002566;
     display: inline-block;
     font-size: 30px;
-    margin-left: 50px;
-    margin-bottom: 100px;
+    width: 33%
   }
 
   .addToFavorites {
     color: #002566;
-    margin-left: 55px;
     font-size: 20px;
     display: block;
+    width: 100%;
   }
 
   .addToFavorites:hover {
@@ -367,20 +393,23 @@ a {
   }
 
   .placeContainer {
-    margin-left: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .placeContainer img {
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
     border-radius: 5px;
+    margin: 2%;
   }
 
   .individualPlace {
     text-align: center;
     color: #002566;
     font-size: 30px;
-    margin-left: 20px;
   }
 
 /*********************

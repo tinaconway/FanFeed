@@ -45,25 +45,25 @@ angular.module('places')
             });
             if($routeParams.placeId) {
               PlaceService.getSingleBar($routeParams.placeId).then(function(listing) {
-              // console.log(listing);
-              // $scope.place = listing;
+              console.log(listing);
+              $scope.place = listing;
               });
             }
 
-            // $scope.map = {
-            //     "center": {
-            //         "latitude": place[0].geometry.location.lat(),
-            //         "longitude": place[0].geometry.location.lng()
-            //     },
-            //     "zoom": 18
-            // };
-            // $scope.marker = {
-            //     id: 0,
-            //     coords: {
-            //         latitude: place[0].geometry.location.lat(),
-            //         longitude: place[0].geometry.location.lng()
-            //     }
-            // };
+            $scope.map = {
+                "center": {
+                    "latitude": place[0].geometry.location.lat(),
+                    "longitude": place[0].geometry.location.lng()
+                },
+                "zoom": 18
+            };
+            $scope.marker = {
+                id: 0,
+                coords: {
+                    latitude: place[0].geometry.location.lat(),
+                    longitude: place[0].geometry.location.lng()
+                }
+            };
 
         }
     };
