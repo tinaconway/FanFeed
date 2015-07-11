@@ -6,7 +6,9 @@ var long;
 
 
 angular.module('places')
+
   .controller('PlacesController', function($scope, $auth, $alert, Account, PlaceService, $routeParams) {
+
     $scope.map = {
         "center": {
             "latitude": 32.7833,

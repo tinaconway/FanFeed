@@ -40,7 +40,7 @@ angular.module('places')
 
             var listingsDetail = JSON.parse(stuff.data.data);
             el.reviews = listingsDetail.result.reviews;
-            el.hours = listingsDetail.result.opening_hours.weekday_text;
+            el.hours = listingsDetail.result.opening_hours.weekday_text.join(', ');
             el.website = listingsDetail.result.website;
             el.phone = listingsDetail.result.formatted_phone_number;
             el.address = listingsDetail.result.formatted_address;
