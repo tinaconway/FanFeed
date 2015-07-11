@@ -39,7 +39,6 @@ angular.module('places')
             lat = place[0].geometry.location.lat();
             long = place[0].geometry.location.lng();
             if (!place || place == 'undefined' || place.length == 0) {
-                console.log('no place data :(');
                 return;
             }
 
@@ -66,9 +65,7 @@ angular.module('places')
         }
     };
     if($routeParams.placeId) {
-      console.log("i am in routeparams");
     PlaceService.getSingleBar($routeParams.placeId, lat, long).then(function(listing) {
-      console.log(listing);
       $scope.place = listing;
 
     });
@@ -77,11 +74,12 @@ angular.module('places')
 
 
     $scope.createComment = function (newComment) {
-        PlaceService.create(newComment);
+        PlaceService.createComment(newComment);
+        // $location.path('/places/detail');
     };
 
     var watchCallback = function () {
-      PlaceService.read().success(function (comments) {
+      PlaceService.getComments().success(function (comments) {
         $scope.comments = comments;
       });
     };

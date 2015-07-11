@@ -22,12 +22,12 @@
         <form class="form">
           <ul data-ng-repeat="comment in comments" class="comments">
             <li class="individualComment">
-              <p>{{comment.content}}</p>
+              <p>{{comment.comment}}</p>
               {{updateProfile.displayName}}
             </li>
           </ul>
           <textarea data-ng-model="comment.content" name="reviewsForm" rows="5" cols="95" placeholder=" What'd you think?"></textarea>
-          <button class="submit" data-ng-click="createComment(newComment)">Submit</button>
+          <button class="submit" data-ng-click="createComment(comment.content)">Submit</button>
         </form>
         </div>
       <div class="col-md-6">

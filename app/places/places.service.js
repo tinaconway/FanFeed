@@ -3,17 +3,15 @@
 
 
 angular.module('places')
-  .factory('PlaceService', function($http, $routeParams) {
+  .factory('PlaceService', function($http, $routeParams, $rootScope) {
     var url="https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="
     var detailUrl = 'https://maps.googleapis.com/maps/api/place/details/json?reference='
     var photoUrl = 'https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=';
     var getBars = function() {
 
       return $http.post('/api/collections/placesProxy', {url: url + lat + ',' + long + '&radius=500&types=bar&key=AIzaSyDh3JutHi19Cdas8AyY36-R2Mn9mkMw-YA'}).then(function (data) {
-      console.log(data);
         var listArray = [];
         var listings = JSON.parse(data.data.data);
-        console.log(listings);
         listings.results.forEach(function(el) {
           var barObj = {
             id: el.id,
@@ -57,7 +55,6 @@ angular.module('places')
     var getSingleBar = function(id, lat, long) {
       var listingId = id;
   return getBars().then(function(data) {
-        console.log(data);
           var filteredArray = [];
           data.forEach(function(el) {
             el.id = el.id.toString();
@@ -66,23 +63,25 @@ angular.module('places')
             }
 
           });
-          console.log(filteredArray[0]);
           return(filteredArray[0]);
       });
 
     }
 
-    var commentsUrl = 'http://tiy-fee-rest.herokuapp.com/collections/barsandstripescomments';
+    var commentsUrl = 'http://tiy-fee-rest.herokuapp.com/collections/barsandstripescomment';
 
     var getComments = function () {
        return $http.get(commentsUrl);
      };
 
-     var createComment = function (newComment) {
-         $http.post(commentsUrl, newComment).success(function () {
-           $rootScope.$broadcast('comment:created');
-         });
-       };
+    var createComment = function (newComment) {
+      var commentObject = {
+        comment: newComment
+      };
+      $http.post(commentsUrl, commentObject).success(function () {
+        $rootScope.$broadcast('comment:created');
+      });
+     };
 
     return {
       getComments: getComments,
