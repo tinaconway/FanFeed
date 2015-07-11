@@ -6,7 +6,7 @@ var long;
 
 
 angular.module('places')
-  .controller('PlacesController', function($scope, $auth, $alert, Account, PlaceService, $routeParams) {
+  .controller('PlacesController', function($scope, $auth, $alert, Account, PlaceService, $routeParams, $sce) {
     $scope.map = {
         "center": {
             "latitude": 32.7833,
@@ -68,7 +68,10 @@ angular.module('places')
     PlaceService.getSingleBar($routeParams.placeId, lat, long).then(function(listing) {
       $scope.place = listing;
       $scope.reviews = listing.reviews;
-
+      $scope.trustSrc = function(src) {
+        return $sce.trustAsResourceUrl(src);
+      }
+      console.log($scope.trustSrc(listing.website))
     });
     }
     $scope.searchbox = { template: 'searchbox.tpl.html', events: events };
@@ -85,7 +88,6 @@ angular.module('places')
     };
 
     $scope.$on('comment:created', watchCallback);
-
 
   });
 })();
