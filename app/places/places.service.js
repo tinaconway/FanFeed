@@ -21,12 +21,13 @@ angular.module('places')
             photo: el.photos,
             ref: el.reference
           }
-          if (typeof(el.photos) === 'object' && el.photos.length > 0) {
-            el.photos = el.photos[0].photo_reference;
-          }
+          // if (typeof(el.photos) === 'object' && el.photos.length > 0) {
+          //   el.photos = el.photos[0].photo_reference;
+          // }
+
           listArray.push(barObj);
         });
-
+        console.log(listArray);
         return listArray;
 
       }).then(function(data) {
@@ -37,7 +38,7 @@ angular.module('places')
 
             var listingsDetail = JSON.parse(stuff.data.data);
             el.reviews = listingsDetail.result.reviews;
-            el.hours = listingsDetail.result.opening_hours.weekday_text;
+            el.hours = listingsDetail.result.opening_hours.weekday_text.join(', ');
             el.website = listingsDetail.result.website;
             el.phone = listingsDetail.result.formatted_phone_number;
             el.address = listingsDetail.result.formatted_address;
@@ -48,7 +49,27 @@ angular.module('places')
 
         return data;
 
-      });
+      })
+      // .then(function(stuff) {
+      // console.log(stuff);
+      //   stuff.forEach(function(el) {
+      //     var el = el;
+      //     if (typeof(el.photo) === 'object') {
+      //     $http.post('/api/collections/placesProxy', {url: photoUrl + el.photo[0].photo_reference + '&key=AIzaSyDh3JutHi19Cdas8AyY36-R2Mn9mkMw-YA'}).success(function(data) {
+      //       console.log(data);
+      //       var imgsrc = "data:image/*;base64," +  btoa(encodeURIComponent(data.data));
+      //       // console.log(imgsrc);
+      //       console.log(imgsrc);
+      //       el.photo = imgsrc;
+      //     })
+      //
+      //     }
+      //
+      //   });
+      //   console.log(stuff);
+      //   return stuff;
+      //
+      // })
 
 
     };
@@ -67,6 +88,12 @@ angular.module('places')
       });
 
     }
+    var getReviews = function(listing) {
+
+      console.log(listing.reviews);
+      return listing.reviews;
+
+    };
 
     var commentsUrl = 'http://tiy-fee-rest.herokuapp.com/collections/barsandstripescomment';
 
@@ -87,7 +114,8 @@ angular.module('places')
       getComments: getComments,
       createComment: createComment,
       getBars: getBars,
-      getSingleBar: getSingleBar
+      getSingleBar: getSingleBar,
+      getReviews: getReviews
     };
 
 

@@ -6,7 +6,13 @@ var long;
 
 
 angular.module('places')
+<<<<<<< HEAD
   .controller('PlacesController', function($scope, $auth, $alert, Account, PlaceService, $routeParams, $location) {
+=======
+
+  .controller('PlacesController', function($scope, $auth, $alert, Account, PlaceService, $routeParams) {
+
+>>>>>>> e5adab02253cb4dcc132ba5b7610b290c9c1e0cb
     $scope.map = {
         "center": {
             "latitude": 32.7833,
@@ -67,6 +73,7 @@ angular.module('places')
     if($routeParams.placeId) {
     PlaceService.getSingleBar($routeParams.placeId, lat, long).then(function(listing) {
       $scope.place = listing;
+      $scope.reviews = listing.reviews;
 
     });
     }
