@@ -386,6 +386,7 @@ a {
   -webkit-transition: .5s;
           transition: .5s;
   border-radius: 5px;
+
   font-size: 2vmax; }
 
 .details:hover {
@@ -412,6 +413,7 @@ a {
   color: #AC0000; }
 
 .placeContainer {
+
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -444,51 +446,54 @@ a {
   background-color: white;
   border: 2px solid;
   border-color: #AC0000;
-  width: 1420px;
+  width: 100%;
   border-style: groove;
-  border-radius: 5px;
-  margin-left: -140px;
-  margin-top: 10px; }
+  border-radius: 5px; }
 
 .placeDetailContainer {
-  margin-left: 20px; }
+  margin-left: 20px;
+  display: inline-block;
+  margin-top: 20px; }
 
 .placeDetailContainer img {
   height: 400px;
   width: 400px;
-  border-radius: 5px; }
+  border-radius: 5px;
+  display: inline-block; }
 
 .detailsAddress, .detailsContact, .detailsHoursOfOperation, .detailsHappyHours {
   color: #002566; }
 
 .individualPlaceDetailTitle {
   color: #002566;
-  font-size: 40px;
-  margin-left: 20px; }
+  font-size: 40px; }
 
 .detailsRating {
   font-size: 25px;
-  margin-left: 150px;
   color: #002566; }
 
 .addToDetailsFavorites {
   color: #002566;
   font-size: 25px;
-  margin-left: 135px; }
+  /*   margin-left: 135px; */ }
 
 .addToDetailsFavorites:hover {
   text-decoration: none;
   color: #AC0000; }
 
 .detailsInfo {
-  margin-top: -400px;
-  margin-left: 200px;
+  margin-top: 40px;
+  margin-left: 30px;
+  width: 50%;
+  vertical-align: top;
   font-size: 30px;
+  display: inline-block;
   text-align: center;
-  margin-bottom: 200px; }
+  /*   margin-bottom: 200px; */ }
 
 .detailsWebsiteLink {
-  color: #002566; }
+  color: #002566;
+  cursor: pointer; }
 
 .detailsWebsiteLink:hover {
   text-decoration: none;
@@ -496,7 +501,7 @@ a {
 
 .backToPlaces {
   float: right;
-  margin-right: 100px;
+  margin-right: 50px;
   margin-top: 20px;
   vertical-align: text-bottom;
   width: 100px;
@@ -520,10 +525,8 @@ a {
 .reviewsContainer {
   border-top: 2px solid;
   border-color: #AC0000;
-  width: 1420px;
-  border-style: groove;
-  margin-left: -140px;
-  margin-top: 10px; }
+  width: 100%;
+  border-style: groove; }
 
 .individualReview {
   background-color: white;

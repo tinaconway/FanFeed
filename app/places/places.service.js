@@ -1,5 +1,5 @@
 (function() {
-  'use strict';
+  // 'use strict';
 
 
 angular.module('places')
@@ -7,13 +7,13 @@ angular.module('places')
     var url="https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=";
     var detailUrl = 'https://maps.googleapis.com/maps/api/place/details/json?reference=';
     var photoUrl = 'https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=';
-    var getBars = function(lat, long) {
+    var getBars = function() {
 
       return $http.post('/api/collections/placesProxy', {url: url + lat + ',' + long + '&radius=500&types=bar&key=AIzaSyDh3JutHi19Cdas8AyY36-R2Mn9mkMw-YA'}).then(function (data) {
+      console.log(data);
         var listArray = [];
         var listings = JSON.parse(data.data.data);
-
-
+        console.log(listings);
         listings.results.forEach(function(el) {
           var barObj = {
             id: el.id,
@@ -42,6 +42,8 @@ angular.module('places')
             el.reviews = listingsDetail.result.reviews;
             el.hours = listingsDetail.result.opening_hours.weekday_text;
             el.website = listingsDetail.result.website;
+            el.phone = listingsDetail.result.formatted_phone_number;
+            el.address = listingsDetail.result.formatted_address;
 
           })
 
@@ -51,12 +53,12 @@ angular.module('places')
       });
 
     };
-    var getSingleBar = function(id) {
-    console.log(id);
-      getBars(lat, long).then(function(data) {
+    var getSingleBar = function(id, lat, long) {
+      var listingId = id;
+  return getBars().then(function(data) {
+        console.log(data);
           var filteredArray = [];
           data.forEach(function(el) {
-            console.log(el);
             el.id = el.id.toString();
             if (el.id === listingId) {
               filteredArray.push(el);
@@ -97,10 +99,8 @@ angular.module('places')
           })
 
         });
-
-        return data;
-
-
+          console.log(filteredArray[0]);
+          return(filteredArray[0]);
       });
 
     }
