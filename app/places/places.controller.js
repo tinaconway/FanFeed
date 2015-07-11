@@ -70,6 +70,7 @@ angular.module('places')
     PlaceService.getSingleBar($routeParams.placeId, lat, long).then(function(listing) {
       console.log(listing);
       $scope.place = listing;
+      $scope.reviews = listing.reviews;
 
     });
     }
