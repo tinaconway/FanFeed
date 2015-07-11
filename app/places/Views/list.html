@@ -15,22 +15,22 @@
     <div ng-repeat="filter:searchAny">
     </div> -->
   <div class="places">
-    <!-- <article class="place" ng-repeat="place in places" data-id="{{place.coordinates}}"> -->
+  <article class="place" ng-repeat="place in places" data-id="{{place.id}}">
       <div class="individualPlaceList">
-          <a class="individualPlace" href="#/places/detail">Biergarten</a>
+          <a class="individualPlace" href="#/places/detail/{{place.id}}">{{place.name}}</a>
         <div class="placeContainer">
             <img ng-src="http://baystreetbiergarten.com/wp-content/themes/baystreetbiergarten/-/img/logo.png" alt="" />
             <a href="#/favorites" class="addToFavorites" ng-click="addPlace(place)">Add to &#9825</a>
         </div>
         <div class="info">
-          <div class="address">Address: 549 E Bay St, Charleston, SC 29403</div>
+          <div class="address">{{place.address}}</div>
           <div class="rating">&#10025 3.4</div>
-          <a href="#/places/detail"><button class="details" ng-click="details">Details</button></a>
+          <a href="#/places/{{place.id}}"><button class="details">Details</button></a>
         </div>
             <!-- <div class="favorites" ng-controller="FavoritesController"> -->
             <!-- </div> -->
       </div>
-      <div class="individualPlaceList">
+      <!-- <div class="individualPlaceList">
           <a class="individualPlace" href="#/places/detail">Tattooed Moose</a>
         <div class="placeContainer">
             <img ng-src="https://pbs.twimg.com/profile_images/514429058604486657/1U5sZlNH.jpeg" alt="" />
@@ -40,8 +40,8 @@
           <div class="rating">&#10025 4.5</div>
           <a href="#/places/detail"><button class="details" ng-click="details">Details</button></a>
         </div>
-            <!-- <div class="favorites" ng-controller="FavoritesController"> -->
-            <!-- </div> -->
+            <div class="favorites" ng-controller="FavoritesController">
+            </div>
         </div>
       </div>
       <div class="individualPlaceList">
@@ -54,8 +54,8 @@
           <div class="rating">&#10025 4.2</div>
           <a href="#/places/detail"><button class="details" ng-click="details">Details</button></a>
         </div>
-            <!-- <div class="favorites" ng-controller="FavoritesController"> -->
-            <!-- </div> -->
+            <div class="favorites" ng-controller="FavoritesController">
+            </div>
         </div>
       </div>
       <div class="individualPlaceList">
@@ -68,10 +68,10 @@
           <div class="rating">&#10025 3.4</div>
           <a href="#/places/detail"><button class="details" ng-click="details">Details</button></a>
         </div>
-            <!-- <div class="favorites" ng-controller="FavoritesController"> -->
-            <!-- </div> -->
+            <div class="favorites" ng-controller="FavoritesController">
+            </div> -->
         </div>
       </div>
-    <!-- </article> -->
+    </article>
   </div>
 </div>
