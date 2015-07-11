@@ -76,5 +76,18 @@ angular.module('places')
     $scope.searchbox = { template: 'searchbox.tpl.html', events: events };
 
 
+    $scope.rating = 7;
+    $scope.max = 10;
+    $scope.isReadonly = false;
+
+    $scope.hoveringOver = function(value) {
+      $scope.overStar = value;
+      $scope.percent = 100 * (value / $scope.max);
+    };
+
+    $scope.ratingStates = [
+    {stateOn: 'glyphicon-star', stateOff: 'glyphicon-star-empty'},
+    ];
+
   });
 })();
