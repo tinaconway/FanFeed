@@ -438,6 +438,16 @@ a {
           transition: .4s;
   border: none; }
 
+.individualComment {
+  background-color: white;
+  border: 2px solid;
+  border-color: #AC0000;
+  width: 100%;
+  border-style: groove;
+  border-radius: 5px;
+  list-style-type: none;
+  padding: 10px; }
+
 /*********************
 * Reviews Section
 *********************/
@@ -480,7 +490,7 @@ textarea {
   border-color: #AC0000;
   background-color: white;
   color: #002566;
-  width: 50px; }
+  width: 75px; }
 
 /*********************
 * Social Buttons

@@ -72,7 +72,21 @@ angular.module('places')
 
     }
 
+    var commentsUrl = 'http://tiy-fee-rest.herokuapp.com/collections/barsandstripescomments';
+
+    var getComments = function () {
+       return $http.get(commentsUrl);
+     };
+
+     var createComment = function (newComment) {
+         $http.post(commentsUrl, newComment).success(function () {
+           $rootScope.$broadcast('comment:created');
+         });
+       };
+
     return {
+      getComments: getComments,
+      createComment: createComment,
       getBars: getBars,
       getSingleBar: getSingleBar
     };

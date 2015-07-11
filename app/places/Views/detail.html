@@ -19,11 +19,17 @@
     <div class="reviews">Reviews</div>
       <div class="col-md-6">
         <div class="barsReviews">Bars and Stripes</div>
-        <div class="form">
-          <textarea name="reviewsForm" rows="5" cols="95" placeholder=" What'd you think?"></textarea>
-          <input class="submit" type="submit" value="Post">
+        <form class="form">
+          <ul data-ng-repeat="comment in comments" class="comments">
+            <li class="individualComment">
+              <p>{{comment.content}}</p>
+              {{updateProfile.displayName}}
+            </li>
+          </ul>
+          <textarea data-ng-model="comment.content" name="reviewsForm" rows="5" cols="95" placeholder=" What'd you think?"></textarea>
+          <button class="submit" data-ng-click="createComment(newComment)">Submit</button>
+        </form>
         </div>
-      </div>
       <div class="col-md-6">
         <div class="allReviews">Everyone</div>
         <div class="individualReview">

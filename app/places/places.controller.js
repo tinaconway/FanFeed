@@ -6,7 +6,7 @@ var long;
 
 
 angular.module('places')
-  .controller('PlacesController', function($scope, $auth, $alert, Account, PlaceService, $routeParams) {
+  .controller('PlacesController', function($scope, $auth, $alert, Account, PlaceService, $routeParams, $location) {
     $scope.map = {
         "center": {
             "latitude": 32.7833,
@@ -76,18 +76,18 @@ angular.module('places')
     $scope.searchbox = { template: 'searchbox.tpl.html', events: events };
 
 
-    $scope.rating = 7;
-    $scope.max = 10;
-    $scope.isReadonly = false;
-
-    $scope.hoveringOver = function(value) {
-      $scope.overStar = value;
-      $scope.percent = 100 * (value / $scope.max);
+    $scope.createComment = function (newComment) {
+        PlaceService.create(newComment);
     };
 
-    $scope.ratingStates = [
-    {stateOn: 'glyphicon-star', stateOff: 'glyphicon-star-empty'},
-    ];
+    var watchCallback = function () {
+      PlaceService.read().success(function (comments) {
+        $scope.comments = comments;
+      });
+    };
+
+    $scope.$on('comment:created', watchCallback);
+
 
   });
 })();
