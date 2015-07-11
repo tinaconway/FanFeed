@@ -40,7 +40,6 @@ body {
   background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("../Images/American-Flag-in-the-Sun.jpg") no-repeat no-repeat;
   background: linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("../Images/American-Flag-in-the-Sun.jpg") no-repeat no-repeat;
   background-size: 100% 800px;
-  position: fixed;
   width: 100%; }
 
 h1, h2, h3, h4, h5, h6 {
@@ -308,19 +307,23 @@ a {
   background-color: white;
   border: 2px solid;
   border-color: #AC0000;
-  width: 1420px;
+  width: 100%;
   border-style: groove;
-  border-radius: 5px;
-  margin-left: -140px;
-  margin-top: 10px; }
+  border-radius: 5px; }
+
+.individualPlace {
+  font-size: 30px;
+  display: block; }
 
 .info {
-  margin-top: -140px;
-  margin-left: 200px; }
+  margin-top: 100px;
+  margin-left: 40px;
+  vertical-align: top;
+  display: inline-block;
+  width: 60%; }
 
 .details {
-  float: right;
-  margin-right: 100px;
+  /*     margin-right: 100px; */
   vertical-align: text-bottom;
   width: 100px;
   height: 50px;
@@ -328,7 +331,8 @@ a {
   background-color: #AC0000;
   -webkit-transition: .5s;
           transition: .5s;
-  border-radius: 5px; }
+  border-radius: 5px;
+  display: inline-block; }
 
 .details:hover {
   color: #AC0000;
@@ -340,13 +344,10 @@ a {
 .address, .rating {
   color: #002566;
   display: inline-block;
-  font-size: 30px;
-  margin-left: 50px;
-  margin-bottom: 100px; }
+  font-size: 30px; }
 
 .addToFavorites {
   color: #002566;
-  margin-left: 55px;
   font-size: 20px;
   display: block; }
 
@@ -355,18 +356,7 @@ a {
   color: #AC0000; }
 
 .placeContainer {
-  margin-left: 20px; }
-
-.placeContainer img {
-  height: 200px;
-  width: 200px;
-  border-radius: 5px; }
-
-.individualPlace {
-  text-align: center;
-  color: #002566;
-  font-size: 30px;
-  margin-left: 20px; }
+  display: inline-block; }
 
 /*********************
 * Details page
@@ -375,51 +365,54 @@ a {
   background-color: white;
   border: 2px solid;
   border-color: #AC0000;
-  width: 1420px;
+  width: 100%;
   border-style: groove;
-  border-radius: 5px;
-  margin-left: -140px;
-  margin-top: 10px; }
+  border-radius: 5px; }
 
 .placeDetailContainer {
-  margin-left: 20px; }
+  margin-left: 20px;
+  display: inline-block;
+  margin-top: 20px; }
 
 .placeDetailContainer img {
   height: 400px;
   width: 400px;
-  border-radius: 5px; }
+  border-radius: 5px;
+  display: inline-block; }
 
 .detailsAddress, .detailsContact, .detailsHoursOfOperation, .detailsHappyHours {
   color: #002566; }
 
 .individualPlaceDetailTitle {
   color: #002566;
-  font-size: 40px;
-  margin-left: 20px; }
+  font-size: 40px; }
 
 .detailsRating {
   font-size: 25px;
-  margin-left: 150px;
   color: #002566; }
 
 .addToDetailsFavorites {
   color: #002566;
   font-size: 25px;
-  margin-left: 135px; }
+  /*   margin-left: 135px; */ }
 
 .addToDetailsFavorites:hover {
   text-decoration: none;
   color: #AC0000; }
 
 .detailsInfo {
-  margin-top: -400px;
-  margin-left: 200px;
+  margin-top: 40px;
+  margin-left: 30px;
+  width: 50%;
+  vertical-align: top;
   font-size: 30px;
+  display: inline-block;
   text-align: center;
-  margin-bottom: 200px; }
+  /*   margin-bottom: 200px; */ }
 
 .detailsWebsiteLink {
-  color: #002566; }
+  color: #002566;
+  cursor: pointer; }
 
 .detailsWebsiteLink:hover {
   text-decoration: none;
@@ -427,7 +420,7 @@ a {
 
 .backToPlaces {
   float: right;
-  margin-right: 100px;
+  margin-right: 50px;
   margin-top: 20px;
   vertical-align: text-bottom;
   width: 100px;
@@ -451,10 +444,8 @@ a {
 .reviewsContainer {
   border-top: 2px solid;
   border-color: #AC0000;
-  width: 1420px;
-  border-style: groove;
-  margin-left: -140px;
-  margin-top: 10px; }
+  width: 100%;
+  border-style: groove; }
 
 .individualReview {
   background-color: white;
