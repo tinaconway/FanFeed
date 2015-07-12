@@ -1,24 +1,31 @@
 <div class="contain">
-  <!-- <input ng-model="searchAny" class="searchBox" placeholder="Search">
-    <div ng-repeat="filter:searchAny">
-    </div> -->
-<!--   <div class="places"> -->
+  <div class="ProfileStats">
+    <h2>Declaration of Bar Dependance</h2>
+    <div class="iconImage">
+      <img src="{{badgeImg}}" alt="">
+    </div>
+    <div class="barsVisited">Stripes Earned:
+      bar array goes here
+    </div>
+  </div>
   <article class="place"  data-id="{{place.id}}" ng-repeat="place in favorites">
-        <div class="individualPlaceList">
-          <div class="imageTitleWrapper">
-          <div class="placeContainer">
-            <div class="titleHeartWrapper">
-              <a id ="placeTitle" class="individualPlace" href="#/places/detail/{{place.id}}">{{place.name}}</a>
-            </div>
+      <div class="individualPlaceList">
+        <div class="imageTitleWrapper">
+        <div class="placeContainer">
+          <img ng-src="" alt="" />
+          <div class="titleHeartWrapper">
+            <a id ="placeTitle" class="individualPlace" href="#/places/detail/{{place.id}}">{{place.name}}</a>
           </div>
-          </div>
-        <div class="info">
-          <div class="address">{{place.address}}</div><br>
-          <div class="rating">&#10025 {{place.rating}}</div><br>
-          <a href="#/places/{{place.id}}"><button class="details">Details</button></a>
+        </div>
+        </div>
+      <div class="info">
+        <div class="address">{{place.address}}</div><br>
+        <div class="rating">&#10025 {{place.rating}}</div><br>
+        <div class="buttonsWrapper">
+          <a href="#/favorites/{{place.id}}"><button class="details">Details</button></a>
+          <div><button class="details" ng-click="deleteFavorite(place._id)" >Delete</button></div>
         </div>
       </div>
-      </div>
-    </article>
-  </div>
+    </div>
+  </article>
 </div>

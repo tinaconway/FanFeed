@@ -7,7 +7,7 @@
     .config(function ($routeProvider) {
       $routeProvider
       .when('/favorites/:id', {
-        templateUrl: 'store/views/detail.html',
+        templateUrl: 'favorites/views/detail.html',
         controller: 'FavoritesController'
       })
       .when('/favorites', {

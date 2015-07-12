@@ -29,6 +29,21 @@
       -ms-flex-pack: center;
           justify-content: center; }
 
+/*
+@mixin submitButton {
+    background-color: $red;
+    font-size: 3vmax;
+    color: $white;
+    border: 3px solid $border;
+    font-family: ScriptFont;
+    border-radius: 5px;
+    &:hover{
+      border-color: $darkBlue;
+      background-color: $white;
+      color: $red;
+      transition: ease .3s;
+    }
+  } */
 body {
   background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("../Images/American-Flag-in-the-Sun.jpg") no-repeat no-repeat fixed;
   background: linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("../Images/American-Flag-in-the-Sun.jpg") no-repeat no-repeat fixed;
@@ -41,6 +56,15 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
   /* color: #000; */ }
+
+.eagleStare {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%; }
 
 .text-muted {
   color: #FFFFFF; }
@@ -392,7 +416,8 @@ a {
   -webkit-transition: .5s;
           transition: .5s;
   border-radius: 5px;
-  font-size: 2vmax; }
+  font-size: 2vmax;
+  margin: 1%; }
 
 .details:hover {
   color: #AC0000;
@@ -426,7 +451,6 @@ a {
   color: #AC0000; }
 
 .placeContainer {
-<<<<<<< HEAD
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -451,10 +475,6 @@ a {
   text-align: center;
   color: #002566;
   font-size: 30px; }
-=======
-  float: right;
-  display: inline-block; }
->>>>>>> d88193ec5334b9d6ec7abaf6c1dd31bc50b2b42f
 
 /*********************
 * Details page

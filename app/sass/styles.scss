@@ -17,7 +17,7 @@ $border: #a3a3a3;
 
 @import "partials/auth";
 @import "partials/header";
-
+/*
 @mixin submitButton {
     background-color: $red;
     font-size: 3vmax;
@@ -31,7 +31,7 @@ $border: #a3a3a3;
       color: $red;
       transition: ease .3s;
     }
-  }
+  } */
 
 html {
 
@@ -51,6 +51,13 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
   /* color: #000; */
+}
+
+.eagleStare {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
 }
 
 .text-muted {
@@ -375,6 +382,7 @@ a {
     transition: .5s;
     border-radius: 5px;
     font-size: 2vmax;
+    margin: 1%;
   }
 
   .details:hover {
@@ -415,7 +423,6 @@ a {
   }
 
   .placeContainer {
-<<<<<<< HEAD
     width: 100%;
     display: flex;
     justify-content: center;

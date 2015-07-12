@@ -5,7 +5,6 @@
   .controller('FavoritesController', function ($scope, FavoritesService, $routeParams) {
 
     FavoritesService.getFavorites().then(function (data) {
-      console.log(data);
       $scope.favorites = data;
     });
 
@@ -16,6 +15,15 @@
     $scope.addToFavorites = function (place) {
       FavoritesService.addFavorite(place);
     };
+
+    $scope.deleteFavorite = function (id) {
+      console.log(id);
+      FavoritesService.delete(id);
+    };
+
+    // $scope.barIcon =
+    //
+    // FavoritesService.iconSprite()
 
   });
 }());

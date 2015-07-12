@@ -2,8 +2,9 @@
   'use strict';
   angular
   .module('favorites')
-  .factory('FavoritesService', function ($http) {
-    var url = 'http://tiy-fee-rest.herokuapp.com/collections/barsNstripes2';
+  .factory('FavoritesService', function ($http, $rootScope) {
+    var url = 'http://tiy-fee-rest.herokuapp.com/collections/barsNstripes1';
+    console.log($rootScope.username);
     var addFavorite = function (place) {
       $http.post(url, place).success(function (resp) {
         console.log("place:", place);
@@ -13,7 +14,6 @@
     };
     var getFavorites = function () {
       return $http.get(url).then(function (data) {
-        console.log(data);
         return data.data
       })
     };
@@ -22,7 +22,23 @@
       return $http.get(url + '/' + id);
     };
 
+    var deleteFavorite = function (id) {
+      $http.delete(url + '/' + id).then(function () {
+        console.log("deleted"); })
+      // .then(function (response) {
+      //   $rootScope.$broadcast('favorite:deleted');
+      // });
+};
+
+    var iconSprite = function (place) {
+      var barIcon = ''
+
+
+
+    }
+
     return {
+      delete: deleteFavorite,
       addFavorite: addFavorite,
       getFavorites: getFavorites,
       getFavorite: getFavorite
