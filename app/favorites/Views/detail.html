@@ -1,18 +1,18 @@
-<div class=contain ng-controller="PlacesController">
-  <div class="individualPlaceDetails">
-      <a href="#/places"><button class="backToPlaces" ng-click="back">Back</button></a>
+<div class=contain>
+  <div class="individualPlaceDetails" data-id="favorite._id">
+      <a href="#/favorites"><button class="backToPlaces">Back</button></a>
     <div class="placeDetailContainer">
   <!--       <img ng-src="http://baystreetbiergarten.com/wp-content/themes/baystreetbiergarten/-/img/logo.png" alt="" /> -->
-        <div class="detailsRating">&#10025 {{place.rating}}</div>
-        <a href="#/favorites" class="addToDetailsFavorites" ng-click="addPlace(place)">Add to &#9825</a>
+        <div class="detailsRating">&#10025 {{favorite.rating}}</div>
+
     </div>
     <div class="detailsInfo">
-      <p class="individualPlaceDetailTitle">{{place.name}}</p>
-        <div class="detailsAddress">{{place.address}}</div>
-        <div class="detailsContact">Phone: {{place.phone}}</div>
-        <div class="detailsHoursOfOperation">{{place.hours}}<br /></div>
+      <p class="individualPlaceDetailTitle">{{favorite.name}}</p>
+        <div class="detailsAddress">{{favorite.address}}</div>
+        <div class="detailsContact">Phone: {{favorite.phone}}</div>
+        <div class="detailsHoursOfOperation">{{favorite.hours}}<br /></div>
         <div class="detailsHappyHours">Happy Hours: 4-7</div>
-        <a href="{{ place.website }}" class="detailsWebsiteLink">Visit the Website</a>
+        <a href="{{ favorite.website }}" class="detailsWebsiteLink">Visit the Website</a>
     </div>
   </div>
   <div class="reviewsContainer">

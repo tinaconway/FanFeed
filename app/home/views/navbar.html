@@ -8,7 +8,7 @@
   <ul id="headerLinks" class="nav navbar-nav">
     <li><a href="/#/">Home</a></li>
     <li><a href="/#/posts" ng-if="isAuthenticated()">Message Board</a></li>
-    <li><a href="/#/favorites" ng-if="isAuthenticated()">Favorites</a></li>
+    <li><a href="/#/favorites" ng-if="isAuthenticated()">Stripes</a></li>
     <li><a href="/#/places">Bars</a></li>
   </ul>
   <ul id="signUpWrapper" ng-if="!isAuthenticated()" class="nav navbar-nav pull-right">
@@ -16,8 +16,8 @@
     <li><a href="/#/signup">Sign up</a></li>
   </ul>
   <ul ng-if="isAuthenticated()" class="nav navbar-nav pull-right">
-    <li><a href="/#/username">{{$rootScope.username}}</a></li>
     <li><a href="/#/logout">Logout</a></li>
     <li><a href="/#/profile">Profile</a></li>
+    <li><a id="username" href="/#/profile">Username:{{username}}</a></li>
   </ul>
 </div>

@@ -6,7 +6,7 @@
     ])
     .config(function ($routeProvider) {
       $routeProvider
-      .when('/favorites/:id', {
+      .when('/favorites/:_id', {
         templateUrl: 'favorites/views/detail.html',
         controller: 'FavoritesController'
       })

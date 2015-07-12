@@ -38,7 +38,7 @@ html {
 }
 
 body {
-  background:  linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('../Images/American-Flag-in-the-Sun.jpg') no-repeat no-repeat fixed;
+  background:  linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('../Images/American-Flag-in-the-Sun.jpg') no-repeat no-repeat fixed;
   background-size:100% 800px;
   width: 100%;
 }
@@ -72,14 +72,14 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: auto;
   font-family: ScriptFont;
 }
 
 .navbar-header {
   padding-left: 15px;
   background-color: $darkBlue;
-  width: 30%;
+  width: 35%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -102,8 +102,10 @@ a {
 
 .navbar-default .navbar-nav>li>a {
     color: $text;
+    text-shadow: 1px 1px 1px white;
     &:hover {
       color: $white;
+      text-shadow: 1px 1px 1px $text;
       transition: ease .25s;
     }
 }
@@ -117,6 +119,10 @@ a {
   color: $text;
 }
 
+#username {
+  font-size: 1vmax;
+}
+
 .navbar-default {
   color: $text;
 }
@@ -127,7 +133,7 @@ a {
 }
 
 .navbar-default .navbar-brand:hover {
-  color: $red;
+  color: $mediumBlue;
   background-color: #fff;
 }
 
@@ -147,9 +153,10 @@ a {
     transition: 0.25s all;
     float: none;
     padding: 0;
-    font-size: 2vmax;
+    font-size: 3vmax;
     width:100%;
     height: 100%;
+    line-height: 33px;
   }
 }
 
@@ -310,6 +317,26 @@ a {
 .btn .fa {
   margin-right: 5px;
 }
+/*********************
+  * Stripes page
+  *********************/
+.profileStats {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 150px;
+  margin: 2%;
+  background-color: $darkBlue;
+  .declaration {
+    width: 100%;
+    font-size: 3vmax;
+    font-family: ScriptFont;
+    color: $white;
+    text-align: center;
+  }
+}
+
 
 /*********************
   * places page
@@ -429,7 +456,9 @@ a {
     align-items: center;
   }
 
-  .placeContainer img {
+  .listImg {
+    background: url('../Images/beer-icons-pack-free-vector.jpg');
+    background-size: 430px;
     height: 150px;
     width: 150px;
     border-radius: 5px;
