@@ -758,3 +758,8 @@ span {
 .pac-container * {
   color: black;
   font-family: Serif; }
+
+#locateMe {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px; }
