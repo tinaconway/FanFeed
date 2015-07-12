@@ -29,21 +29,6 @@
       -ms-flex-pack: center;
           justify-content: center; }
 
-/*
-@mixin submitButton {
-    background-color: $red;
-    font-size: 3vmax;
-    color: $white;
-    border: 3px solid $border;
-    font-family: ScriptFont;
-    border-radius: 5px;
-    &:hover{
-      border-color: $darkBlue;
-      background-color: $white;
-      color: $red;
-      transition: ease .3s;
-    }
-  } */
 body {
   background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../Images/American-Flag-in-the-Sun.jpg") no-repeat no-repeat fixed;
   background: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../Images/American-Flag-in-the-Sun.jpg") no-repeat no-repeat fixed;
@@ -554,6 +539,7 @@ a {
 
 .detailsInfo {
   margin-bottom: 30px;
+  width: 80%;
   vertical-align: top;
   font-size: 30px;
   display: inline-block;
@@ -569,6 +555,7 @@ a {
   color: #AC0000; }
 
 .backToPlaces {
+  display: inline-block;
   float: right;
   margin-right: 50px;
   margin-top: 20px;
@@ -605,7 +592,8 @@ a {
   border-top: 2px solid;
   border-color: #AC0000;
   width: 100%;
-  border-style: groove; }
+  border-style: groove;
+  text-align: center; }
 
 .individualReview {
   background-color: white;
@@ -758,4 +746,59 @@ textarea {
   50% {
     opacity: 1; } }
 .angular-google-map-container {
-  height: 400px; }
+  height: 400px;
+  width: 80%;
+  margin-left: 10%; }
+
+.homepage {
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Images/oldpaperbackground.gif") no-repeat no-repeat;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Images/oldpaperbackground.gif") no-repeat no-repeat;
+  background-size: 100%;
+  border: 2px solid;
+  border-color: #AC0000;
+  width: 90%;
+  border-style: groove;
+  text-align: center;
+  border-radius: 5px;
+  /* display: flex;
+  align-items: center;
+  flex-wrap: wrap; */
+  margin-left: auto;
+  margin-right: auto;
+  font-family: ScriptFont;
+  color: white; }
+  .homepage .titleHeartWrapper {
+    width: 50%;
+    text-align: center; }
+    .homepage .titleHeartWrapper #placeTitle {
+      width: 100%;
+      font-family: ScriptFont;
+      text-align: center;
+      margin: 2%;
+      font-size: 3.5vmax; }
+
+#homeTitle {
+  color: white;
+  font-family: ScriptFont; }
+
+.containTitle {
+  text-align: center; }
+
+.contain {
+  font-family: ScriptFont; }
+
+span {
+  font-size: 2em;
+  color: white;
+  font-family: ScriptFont; }
+
+#searchBoxParent {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: Serif;
+  color: black; }
+
+.pac-container * {
+  color: black;
+  font-family: Serif; }
