@@ -1,6 +1,10 @@
 @font-face {
   font-family: ScriptFont;
+<<<<<<< HEAD
   src: url("../fonts/Freebooter-Script/freebooterscript.ttf"); }
+=======
+  src: url("../fonts/lobster-two/LobsterTwo-Italic.otf"); }
+>>>>>>> 2a0c27c274e88347bf42269fba1cf9c235a30242
 @font-face {
   font-family: BoldFont;
   src: url("../fonts/aleo/Aleo-Bold.otf"); }
@@ -29,6 +33,7 @@
       -ms-flex-pack: center;
           justify-content: center; }
 
+<<<<<<< HEAD
 html {
   /* background:  linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('../Images/American-Flag-in-the-Sun.jpg') no-repeat no-repeat;
   background-size: 100% 800px;
@@ -39,6 +44,11 @@ body {
   color: #333333;
   background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("../Images/American-Flag-in-the-Sun.jpg") no-repeat no-repeat;
   background: linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("../Images/American-Flag-in-the-Sun.jpg") no-repeat no-repeat;
+=======
+body {
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("../Images/American-Flag-in-the-Sun.jpg") no-repeat no-repeat fixed;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("../Images/American-Flag-in-the-Sun.jpg") no-repeat no-repeat fixed;
+>>>>>>> 2a0c27c274e88347bf42269fba1cf9c235a30242
   background-size: 100% 800px;
   width: 100%; }
 
@@ -303,6 +313,69 @@ a {
 /*********************
   * places page
   *********************/
+<<<<<<< HEAD
+=======
+.place {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%; }
+
+.imageTitleWrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  width: 40%; }
+
+.individualPlaceList {
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Images/oldpaperbackground.gif") no-repeat no-repeat;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Images/oldpaperbackground.gif") no-repeat no-repeat;
+  background-size: 100%;
+  border: 2px solid;
+  border-color: #AC0000;
+  width: 100%;
+  border-style: groove;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  margin: 2%; }
+  .individualPlaceList .titleHeartWrapper {
+    width: 50%;
+    text-align: center; }
+    .individualPlaceList .titleHeartWrapper #placeTitle {
+      width: 100%;
+      font-family: ScriptFont;
+      text-align: center;
+      margin: 2%;
+      font-size: 3.5vmax; }
+
+>>>>>>> 2a0c27c274e88347bf42269fba1cf9c235a30242
 .individualPlaceList {
   background-color: white;
   border: 2px solid;
@@ -316,6 +389,7 @@ a {
   display: block; }
 
 .info {
+<<<<<<< HEAD
   margin-top: 20px;
   margin-bottom: 20px;
   margin-left: 40px;
@@ -328,12 +402,36 @@ a {
   vertical-align: text-bottom;
   width: 100px;
   height: 50px;
+=======
+  width: 60%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.details {
+  float: right;
+  vertical-align: text-bottom;
+  width: 100%;
+>>>>>>> 2a0c27c274e88347bf42269fba1cf9c235a30242
   color: white;
   background-color: #AC0000;
   -webkit-transition: .5s;
           transition: .5s;
   border-radius: 5px;
+<<<<<<< HEAD
   display: inline-block; }
+=======
+  font-size: 2vmax; }
+>>>>>>> 2a0c27c274e88347bf42269fba1cf9c235a30242
 
 .details:hover {
   color: #AC0000;
@@ -342,23 +440,76 @@ a {
           transition: .4s;
   border: none; }
 
+<<<<<<< HEAD
 .address, .rating {
   color: #002566;
   display: inline-block;
   font-size: 30px; }
+=======
+.rating {
+  color: #002566;
+  display: inline-block;
+  font-size: 30px;
+  width: 20%;
+  text-align: center; }
+
+.address {
+  color: #002566;
+  display: inline-block;
+  font-size: 30px;
+  text-align: center;
+  width: 60%; }
+>>>>>>> 2a0c27c274e88347bf42269fba1cf9c235a30242
 
 .addToFavorites {
   color: #002566;
   font-size: 20px;
+<<<<<<< HEAD
   display: block; }
+=======
+  display: block;
+  width: 100%; }
+>>>>>>> 2a0c27c274e88347bf42269fba1cf9c235a30242
 
 .addToFavorites:hover {
   text-decoration: none;
   color: #AC0000; }
 
 .placeContainer {
+<<<<<<< HEAD
   float: right;
   display: inline-block; }
+=======
+<<<<<<< HEAD
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.placeContainer img {
+  height: 150px;
+  width: 150px;
+  border-radius: 5px;
+  margin: 2%; }
+
+.individualPlace {
+  text-align: center;
+  color: #002566;
+  font-size: 30px; }
+=======
+  float: right;
+  display: inline-block; }
+>>>>>>> d88193ec5334b9d6ec7abaf6c1dd31bc50b2b42f
+>>>>>>> 2a0c27c274e88347bf42269fba1cf9c235a30242
 
 /*********************
 * Details page
