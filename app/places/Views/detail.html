@@ -10,20 +10,26 @@
       <p class="individualPlaceDetailTitle">{{place.name}}</p>
         <div class="detailsAddress">{{place.address}}</div>
         <div class="detailsContact">Phone: {{place.phone}}</div>
-        <div class="detailsHoursOfOperation">{{place.hours}}</div>
+        <div class="detailsHoursOfOperation">{{place.hours}}<br /></div>
         <div class="detailsHappyHours">Happy Hours: 4-7</div>
-        <a ng-src="{{place.website}}" class="detailsWebsiteLink">Visit the Website</a>
+        <a href="{{ place.website }}" class="detailsWebsiteLink">Visit the Website</a>
     </div>
   </div>
   <div class="reviewsContainer">
     <div class="reviews">Reviews</div>
       <div class="col-md-6">
         <div class="barsReviews">Bars and Stripes</div>
-        <div class="form">
-          <textarea name="reviewsForm" rows="5" cols="95" placeholder=" What'd you think?"></textarea>
-          <input class="submit" type="submit" value="Post">
+        <form class="form">
+          <ul data-ng-repeat="comment in comments" class="comments">
+            <li class="individualComment">
+              <p>{{comment.comment}}</p>
+              {{updateProfile.displayName}}
+            </li>
+          </ul>
+          <textarea data-ng-model="comment.content" name="reviewsForm" rows="5" cols="95" placeholder=" What'd you think?"></textarea>
+          <button class="submit" data-ng-click="createComment(comment.content)">Submit</button>
+        </form>
         </div>
-      </div>
       <div class="col-md-6">
         <div class="allReviews">Everyone</div>
 
