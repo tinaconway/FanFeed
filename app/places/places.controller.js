@@ -46,6 +46,13 @@ angular.module('places')
               $scope.places = data;
 
             });
+            
+            if($routeParams.placeId) {
+              PlaceService.getSingleBar($routeParams.placeId).then(function(listing) {
+              console.log(listing);
+              $scope.place = listing;
+              });
+            }
 
             $scope.map = {
                 "center": {
