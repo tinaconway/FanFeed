@@ -147,10 +147,12 @@ a {
 
 .navbar-default .navbar-brand {
   color: #333333;
+  text-shadow: 2px 2px 1px #FFFFFF;
   margin: 3%; }
 
 .navbar-default .navbar-brand:hover {
   color: #657FAD;
+  text-shadow: 2px 2px 1px #333333;
   background-color: #fff; }
 
 .brandWrapper {
@@ -347,7 +349,11 @@ a {
     font-size: 3vmax;
     font-family: ScriptFont;
     color: #FFFFFF;
+    text-shadow: 2px 2px 1px #AC0000;
     text-align: center; }
+  .profileStats .barsVisited {
+    font-size: 2.5vmax;
+    text-shadow: 1px 1px 1px black; }
 
 /*********************
   * places page
