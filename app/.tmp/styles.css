@@ -1,6 +1,10 @@
 @font-face {
   font-family: ScriptFont;
+<<<<<<< HEAD
+  src: url("../fonts/Freebooter-Script/freebooterscript.ttf"); }
+=======
   src: url("../fonts/lobster-two/LobsterTwo-Italic.otf"); }
+>>>>>>> 2a0c27c274e88347bf42269fba1cf9c235a30242
 @font-face {
   font-family: BoldFont;
   src: url("../fonts/aleo/Aleo-Bold.otf"); }
@@ -29,9 +33,22 @@
       -ms-flex-pack: center;
           justify-content: center; }
 
+<<<<<<< HEAD
+html {
+  /* background:  linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('../Images/American-Flag-in-the-Sun.jpg') no-repeat no-repeat;
+  background-size: 100% 800px;
+  position: fixed;
+  width: 100%; */ }
+
+body {
+  color: #333333;
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("../Images/American-Flag-in-the-Sun.jpg") no-repeat no-repeat;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("../Images/American-Flag-in-the-Sun.jpg") no-repeat no-repeat;
+=======
 body {
   background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("../Images/American-Flag-in-the-Sun.jpg") no-repeat no-repeat fixed;
   background: linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("../Images/American-Flag-in-the-Sun.jpg") no-repeat no-repeat fixed;
+>>>>>>> 2a0c27c274e88347bf42269fba1cf9c235a30242
   background-size: 100% 800px;
   width: 100%; }
 
@@ -296,6 +313,8 @@ a {
 /*********************
   * places page
   *********************/
+<<<<<<< HEAD
+=======
 .place {
   display: -webkit-box;
   display: -webkit-flex;
@@ -356,6 +375,7 @@ a {
       margin: 2%;
       font-size: 3.5vmax; }
 
+>>>>>>> 2a0c27c274e88347bf42269fba1cf9c235a30242
 .individualPlaceList {
   background-color: white;
   border: 2px solid;
@@ -369,6 +389,20 @@ a {
   display: block; }
 
 .info {
+<<<<<<< HEAD
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 40px;
+  vertical-align: top;
+  display: inline-block;
+  width: 60%; }
+
+.details {
+  /*     margin-right: 100px; */
+  vertical-align: text-bottom;
+  width: 100px;
+  height: 50px;
+=======
   width: 60%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -387,12 +421,17 @@ a {
   float: right;
   vertical-align: text-bottom;
   width: 100%;
+>>>>>>> 2a0c27c274e88347bf42269fba1cf9c235a30242
   color: white;
   background-color: #AC0000;
   -webkit-transition: .5s;
           transition: .5s;
   border-radius: 5px;
+<<<<<<< HEAD
+  display: inline-block; }
+=======
   font-size: 2vmax; }
+>>>>>>> 2a0c27c274e88347bf42269fba1cf9c235a30242
 
 .details:hover {
   color: #AC0000;
@@ -401,6 +440,12 @@ a {
           transition: .4s;
   border: none; }
 
+<<<<<<< HEAD
+.address, .rating {
+  color: #002566;
+  display: inline-block;
+  font-size: 30px; }
+=======
 .rating {
   color: #002566;
   display: inline-block;
@@ -414,18 +459,27 @@ a {
   font-size: 30px;
   text-align: center;
   width: 60%; }
+>>>>>>> 2a0c27c274e88347bf42269fba1cf9c235a30242
 
 .addToFavorites {
   color: #002566;
   font-size: 20px;
+<<<<<<< HEAD
+  display: block; }
+=======
   display: block;
   width: 100%; }
+>>>>>>> 2a0c27c274e88347bf42269fba1cf9c235a30242
 
 .addToFavorites:hover {
   text-decoration: none;
   color: #AC0000; }
 
 .placeContainer {
+<<<<<<< HEAD
+  float: right;
+  display: inline-block; }
+=======
 <<<<<<< HEAD
   width: 100%;
   display: -webkit-box;
@@ -455,6 +509,7 @@ a {
   float: right;
   display: inline-block; }
 >>>>>>> d88193ec5334b9d6ec7abaf6c1dd31bc50b2b42f
+>>>>>>> 2a0c27c274e88347bf42269fba1cf9c235a30242
 
 /*********************
 * Details page
