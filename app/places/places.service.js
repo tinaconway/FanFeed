@@ -32,6 +32,7 @@ angular.module('places')
 
       }).then(function(data) {
 
+
         data.forEach(function(el) {
           var el = el;
           $http.post('/api/collections/placesProxy', {url: detailUrl + el.ref + '&key=AIzaSyDh3JutHi19Cdas8AyY36-R2Mn9mkMw-YA'}).then(function(stuff) {
@@ -46,7 +47,7 @@ angular.module('places')
           })
 
         });
-
+        console.log(data[0].photo[0].html_attributions);
         return data;
 
       })
@@ -70,7 +71,6 @@ angular.module('places')
       //   return stuff;
       //
       // })
-
 
     };
     var getSingleBar = function(id, lat, long) {
