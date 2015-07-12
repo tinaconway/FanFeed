@@ -29,6 +29,21 @@
       -ms-flex-pack: center;
           justify-content: center; }
 
+/*
+@mixin submitButton {
+    background-color: $red;
+    font-size: 3vmax;
+    color: $white;
+    border: 3px solid $border;
+    font-family: ScriptFont;
+    border-radius: 5px;
+    &:hover{
+      border-color: $darkBlue;
+      background-color: $white;
+      color: $red;
+      transition: ease .3s;
+    }
+  } */
 body {
   background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../Images/American-Flag-in-the-Sun.jpg") no-repeat no-repeat fixed;
   background: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../Images/American-Flag-in-the-Sun.jpg") no-repeat no-repeat fixed;
