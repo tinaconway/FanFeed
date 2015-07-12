@@ -12,7 +12,7 @@
       })
       .when('/favorites', {
         templateUrl: 'favorites/views/list.html',
-        controller: 'PlacesController'
+        controller: 'FavoritesController'
       });
     });
 })();
