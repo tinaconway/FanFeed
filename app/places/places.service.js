@@ -75,7 +75,7 @@ angular.module('places')
     };
     var getSingleBar = function(id, lat, long) {
       var listingId = id;
-  return getBars().then(function(data) {
+      return getBars().then(function(data) {
           var filteredArray = [];
           data.forEach(function(el) {
             el.id = el.id.toString();
