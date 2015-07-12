@@ -415,6 +415,7 @@ a {
   }
 
   .placeContainer {
+<<<<<<< HEAD
     width: 100%;
     display: flex;
     justify-content: center;
@@ -445,14 +446,12 @@ a {
   width: 100%;
   border-style: groove;
   border-radius: 5px;
-
 }
 
 .placeDetailContainer {
-margin-left: 20px;
-display: inline-block;
-margin-top: 20px;
-
+  margin-left: 20px;
+  display: inline-block;
+  margin-top: 20px;
 }
 
 
@@ -491,9 +490,8 @@ margin-top: 20px;
 }
 
 .detailsInfo {
-  margin-top: 40px;
-  margin-left: 30px;
-  width: 50%;
+  margin-bottom: 30px;
+
   vertical-align: top;
   font-size: 30px;
   display: inline-block;
@@ -529,6 +527,17 @@ margin-top: 20px;
   background-color: white;
   transition: .4s;
   border: none;
+}
+
+.individualComment {
+  background-color: white;
+  border: 2px solid;
+  border-color: #AC0000;
+  width: 100%;
+  border-style: groove;
+  border-radius: 5px;
+  list-style-type: none;
+  padding: 10px;
 }
 
 /*********************
@@ -580,7 +589,7 @@ textarea {
   border-color: #AC0000;
   background-color: white;
   color: #002566;
-  width: 50px;
+  width: 75px;
 }
 
 /*********************

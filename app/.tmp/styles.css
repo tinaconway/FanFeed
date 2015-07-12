@@ -426,6 +426,7 @@ a {
   color: #AC0000; }
 
 .placeContainer {
+<<<<<<< HEAD
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -450,6 +451,10 @@ a {
   text-align: center;
   color: #002566;
   font-size: 30px; }
+=======
+  float: right;
+  display: inline-block; }
+>>>>>>> d88193ec5334b9d6ec7abaf6c1dd31bc50b2b42f
 
 /*********************
 * Details page
@@ -494,9 +499,7 @@ a {
   color: #AC0000; }
 
 .detailsInfo {
-  margin-top: 40px;
-  margin-left: 30px;
-  width: 50%;
+  margin-bottom: 30px;
   vertical-align: top;
   font-size: 30px;
   display: inline-block;
@@ -530,6 +533,16 @@ a {
   -webkit-transition: .4s;
           transition: .4s;
   border: none; }
+
+.individualComment {
+  background-color: white;
+  border: 2px solid;
+  border-color: #AC0000;
+  width: 100%;
+  border-style: groove;
+  border-radius: 5px;
+  list-style-type: none;
+  padding: 10px; }
 
 /*********************
 * Reviews Section
@@ -573,7 +586,7 @@ textarea {
   border-color: #AC0000;
   background-color: white;
   color: #002566;
-  width: 50px; }
+  width: 75px; }
 
 /*********************
 * Social Buttons
