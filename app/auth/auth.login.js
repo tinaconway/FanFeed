@@ -1,5 +1,5 @@
 angular.module('auth')
-  .controller('LoginCtrl', function($scope, $alert, $auth) {
+  .controller('LoginCtrl', function($scope, $alert, $auth, $location) {
     $scope.login = function() {
       $auth.login({
           email: $scope.email,
@@ -33,6 +33,7 @@ angular.module('auth')
             type: 'material',
             duration: 3
           });
+
         })
         .catch(function(response) {
           $alert({
@@ -41,6 +42,7 @@ angular.module('auth')
             type: 'material',
             duration: 3
           });
+
         });
     };
   });

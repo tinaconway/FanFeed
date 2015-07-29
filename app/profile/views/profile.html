@@ -1,13 +1,17 @@
+<div class="background-image">
 <div class="container">
+
   <div class="panel panel-default">
+
     <div class="panel-heading">Profile</div>
+
     <div class="panel-body">
-      <legend><i class="ion-clipboard"></i> Edit My Profile</legend>
+<!--       <legend><i class="ion-clipboard"></i> Edit My Profile</legend> -->
       <form method="post" ng-submit="updateProfile()">
-        <div class="form-group">
-          <label class="control-label">Profile Picture</label>
-          <img class="profile-picture" ng-src="{{user.picture || 'http://placehold.it/100x100'}}">
-        </div>
+      <!--   <div class="form-group">
+        <label class="control-label">Profile Picture</label>
+        <img class="profile-picture" ng-src="{{user.picture || 'http://placehold.it/100x100'}}">
+      </div> -->
         <div class="form-group">
           <label class="control-label"><i class="ion-person"></i> Display Name</label>
           <input type="text" class="form-control" ng-model="user.displayName" />
@@ -16,65 +20,92 @@
           <label class="control-label"><i class="ion-at"></i> Email Address</label>
           <input type="email" class="form-control" ng-model="user.email" />
         </div>
-        <button class="btn btn-lg btn-success">Update Information</button>
+        <button class="btn btn-lg btn-success grow">Update Information</button>
       </form>
     </div>
   </div>
 
-  <div class="panel panel-default">
-    <div class="panel-heading">Accounts</div>
+  <div class="panel panel-default center-dropdown">
+    <div class="panel-heading">Team Preferences</div>
     <div class="panel-body">
-      <legend><i class="ion-link"></i> Linked Accounts</legend>
-      <div class="btn-group-vertical">
-        <button class="btn btn-sm btn-danger" ng-if="user.facebook" ng-click="unlink('facebook')">
-          <i class="ion-social-facebook"></i> Unlink Facebook Account
-        </button>
-        <button class="btn btn-sm btn-primary" ng-if="!user.facebook" ng-click="link('facebook')">
-          <i class="ion-social-facebook"></i> Link Facebook Account
-        </button>
+    <input ng-click="clicked= !clicked" type="button" class="dropdown" value="NFL">
+    <div ng-show="clicked" class="ng-hide panel-body">
 
-        <button class="btn btn-sm btn-danger" ng-if="user.google" ng-click="unlink('google')">
-          <i class="ion-social-googleplus"></i> Unlink Google Account
-        </button>
-        <button class="btn btn-sm btn-primary" ng-if="!user.google" ng-click="link('google')">
-          <i class="ion-social-googleplus"></i> Link Google Account
-        </button>
-
-        <button class="btn btn-sm btn-danger" ng-if="user.linkedin" ng-click="unlink('linkedin')">
-          <i class="ion-social-linkedin"></i> Unlink LinkedIn Account
-        </button>
-        <button class="btn btn-sm btn-primary" ng-if="!user.linkedin" ng-click="link('linkedin')">
-          <i class="ion-social-linkedin"></i> Link LinkedIn Account
-        </button>
-
-        <button class="btn btn-sm btn-danger" ng-if="user.twitter" ng-click="unlink('twitter')">
-          <i class="ion-social-twitter"></i> Unlink Twitter Account
-        </button>
-        <button class="btn btn-sm btn-primary" ng-if="!user.twitter" ng-click="link('twitter')">
-          <i class="ion-social-twitter"></i> Link Twitter Account
-        </button>
-
-        <button class="btn btn-sm btn-danger" ng-if="user.github" ng-click="unlink('github')">
-          <i class="ion-social-github"></i> Unlink GitHub Account
-        </button>
-        <button class="btn btn-sm btn-primary" ng-if="!user.github" ng-click="link('github')">
-          <i class="ion-social-github"></i> Link GitHub Account
-        </button>
-
-        <button class="btn btn-sm btn-danger" ng-if="user.foursquare" ng-click="unlink('foursquare')">
-          <i class="ion-social-foursquare"></i> Unlink Foursquare Account
-        </button>
-        <button class="btn btn-sm btn-primary" ng-if="!user.foursquare" ng-click="link('foursquare')">
-          <i class="ion-social-foursquare"></i> Link Foursquare Account
-        </button>
-
-        <button class="btn btn-sm btn-danger" ng-if="user.yahoo" ng-click="unlink('yahoo')">
-          <i class="ion-social-yahoo"></i> Unlink Yahoo Account
-        </button>
-        <button class="btn btn-sm btn-primary" ng-if="!user.yahoo" ng-click="link('yahoo')">
-          <i class="ion-social-yahoo"></i> Link Yahoo Account
-        </button>
+      <div class="checkboxList">
+      <label ng-repeat="role in rolesNFL">
+          <input type="checkbox" checklist-model="users.rolesNFL" checklist-value="role"> {{role}}
+      </label>
       </div>
+      <div class="checkboxList">
+      <label ng-repeat="role in rolesNFL2">
+          <input type="checkbox" checklist-model="users.rolesNFL2" checklist-value="role"> {{role}}
+      </label>
+    </div><br>
+    <input class="save-button btn grow" ng-click="saveTeams(users)" type="button" value="Save">
+
+    </div>
+
+    <input ng-click="clicked1= !clicked1" type="button" class="dropdown" value="MLB">
+    <div ng-show="clicked1" class="ng-hide panel-body">
+      <div class="checkboxList">
+      <label ng-repeat="role in rolesMLB">
+          <input type="checkbox" checklist-model="users.rolesMLB" checklist-value="role"> {{role}}
+      </label>
+      </div>
+      <div class="checkboxList">
+      <label ng-repeat="role in rolesMLB2">
+          <input class="check" type="checkbox" checklist-model="users.rolesMLB2" checklist-value="role"> {{role}}
+      </label>
+    </div><br>
+      <input class="save-button btn grow" ng-click="saveTeams(users)" type="button" value="Save">
+    </div>
+
+
+    <input ng-click="clicked2= !clicked2" type="button" class="dropdown" value="NHL">
+    <div ng-show="clicked2" class="ng-hide panel-body">
+      <div class="checkboxList">
+      <label ng-repeat="role in rolesNHL">
+          <input type="checkbox" checklist-model="users.rolesNHL" checklist-value="role"> {{role}}
+      </label>
+      </div>
+      <div class="checkboxList">
+      <label ng-repeat="role in rolesNHL2">
+          <input class="check" type="checkbox" checklist-model="users.rolesNHL2" checklist-value="role"> {{role}}
+      </label>
+    </div><br>
+
+  <input class="save-button btn grow" ng-click="saveTeams(users)" type="button" value="Save">
+    </div>
+  <input ng-click="clicked3= !clicked3" type="button" class="dropdown" value="NBA">
+    <div ng-show="clicked3" class="ng-hide panel-body">
+      <div class="checkboxListNBA">
+      <label ng-repeat="role in rolesNBA">
+          <input type="checkbox" checklist-model="users.rolesNBA" checklist-value="role"> {{role}}
+      </label>
+      </div>
+      <div class="checkboxListNBA">
+      <label ng-repeat="role in rolesNBA2">
+          <input class="check" type="checkbox" checklist-model="users.rolesNBA2" checklist-value="role"> {{role}}
+      </label>
+    </div><br>
+
+    <input class="save-button btn grow" ng-click="saveTeams(users)" type="button" value="Save">
+    </div>
+    <input ng-click="clicked4= !clicked4" type="button" class="dropdown" value="Extras">
+      <div ng-show="clicked4" class="ng-hide panel-body">
+        <div class="checkboxListExtra">
+        <label ng-repeat="role in rolesExtra">
+            <input type="checkbox" checklist-model="users.rolesExtra" checklist-value="role"> {{role}}
+        </label>
+        </div>
+        <br>
+
+      <input class="save-button btn grow" ng-click="saveTeams(users)" type="button" value="Save">
+      </div>
+
     </div>
   </div>
+</div>
+</div>
+
 </div>

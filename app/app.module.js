@@ -6,15 +6,13 @@ angular.module('MyApp', [
   'auth',
   'profile',
   'posts',
-  'places',
-  'favorites'
-
+  'feed'
 ])
 
 .config(function($routeProvider) {
   $routeProvider
     .when('/', {
-      templateUrl: 'places/views/location.html'
+      templateUrl: 'home/views/home.html'
     })
     .when('/404', {
       template: '<h1>Sorry, page not found</h1>'

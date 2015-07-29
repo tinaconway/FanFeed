@@ -7,7 +7,6 @@
           return $http.get('/api/me');
         },
         updateProfile: function(profileData) {
-          console.log(profileData);
           return $http.put('/api/me', profileData);
         }
       };

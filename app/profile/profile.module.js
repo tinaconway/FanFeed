@@ -1,4 +1,4 @@
-angular.module('profile', ['ngMessages', 'ngRoute', 'mgcrea.ngStrap'])
+angular.module('profile', ['ngMessages', 'ngRoute', 'mgcrea.ngStrap', 'checklist-model'])
   .config(function($routeProvider, $authProvider) {
     $routeProvider
       .when('/profile', {

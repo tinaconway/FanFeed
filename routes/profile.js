@@ -25,6 +25,13 @@ router.route('/me')
       // user.newProperty = req.body.newProperty || user.newProperty
       user.displayName = req.body.displayName || user.displayName;
       user.email = req.body.email || user.email;
+      console.log("THE BODY ", req.body);
+      user.favoriteNFL = req.body.favoriteNFL || [];
+      user.favoriteMLB = req.body.favoriteMLB || [];
+      user.favoriteNHL = req.body.favoriteNHL || [];
+      user.favoriteNBA = req.body.favoriteNBA || [];
+      user.favoriteExtra = req.body.favoriteExtra || [];
+
       user.save(function(err) {
         res.status(200).end();
       });

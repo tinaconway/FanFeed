@@ -15,7 +15,12 @@ var userSchema = new mongoose.Schema({
   linkedin: String,
   live: String,
   yahoo: String,
-  twitter: String
+  twitter: String,
+  favoriteNFL: Array,
+  favoriteMLB: Array,
+  favoriteNHL: Array,
+  favoriteNBA: Array,
+  favoriteExtra: Array
 });
 
 userSchema.pre('save', function(next) {
