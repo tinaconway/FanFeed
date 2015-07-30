@@ -1,9 +1,10 @@
 <div class="background-image-main">
-      <div id="tabs" class="panel panel-default feed-news" ng-controller="FeedController">
+      <div id="tabs" class="panel panel-default feed-news">
           <ul class="feed-ul nav nav-tabs">
               <li role="presentation" class="tab feed-li" ng-repeat="tab in tabs"
                   ng-class="{active:isActiveTab(tab.url)}"
                   ng-click="onClickTab(tab)">{{tab.title}}</li>
+                  <input type="text" ng-model="search.title" class="filter" name="name" val="" placeholder="Search" size="40">
           </ul>
           <div id="mainView">
               <div ng-include="currentTab"></div>
@@ -12,37 +13,67 @@
 
 
 
-        <script type="text/ng-template" id="nfl.tpl.html">
+      <script type="text/ng-template" id="nfl.tpl.html">
     		<div class="contain">
-        <div id="viewOne"  ng-controller="FeedController" ng-repeat="article in nflArray">
-    			<h2>article.title</h2>
-    			<p>article.description</p>
+        <div id="viewOne"  ng-repeat="article in nflArray | filter: search:strict | orderBy: 'pubDate':true">
+        <i class="fa fa-star star growStar"></i>
+    			<a href="{{article.link}}"><h3>{{article.title}}</h3></a>
+          <p class="views">
+            {{article.pubDate}}
+          </p>
+        	<p class="views">{{article.description}}</p>
     		</div>
         </div>
     	</script>
 
     	<script type="text/ng-template" id="mlb.tpl.html">
       <div class="contain">
-      <div id="viewTwo"  ng-controller="FeedController" ng-repeat="article in mlbArray">
-        <h2>article.title</h2>
-        <p>article.description</p>
+      <div id="viewTwo"  ng-repeat="article in mlbArray | filter: search:strict | orderBy: 'pubDate':true">
+          <i class="fa fa-star star growStar"></i>
+      <a href="{{article.link}}"><h3>{{article.title}}</h3></a>
+      <p class="views">
+        {{article.pubDate}}
+      </p>
+      <p class="views">{{article.description}}</p>
       </div>
       </div>
     	</script>
 
     	<script type="text/ng-template" id="nhl.tpl.html">
       <div class="contain">
-      <div id="viewThree"  ng-controller="FeedController" ng-repeat="article in nhlArray">
-        <h2>article.title</h2>
-        <p>article.description</p>
+      <div id="viewThree"  ng-repeat="article in nhlArray | filter: search:strict | orderBy: 'pubDate':true">
+          <i class="fa fa-star star growStar"></i>
+      <a href="{{article.link}}"><h3>{{article.title}}</h3></a>
+      <p class="views">
+        {{article.pubDate}}
+      </p>
+      <p class="views">{{article.description}}</p>
       </div>
       </div>
     	</script>
+
       <script type="text/ng-template" id="nba.tpl.html">
       <div class="contain">
-      <div id="viewFour"  ng-controller="FeedController" ng-repeat="article in nbaArray">
-        <h2>article.title</h2>
-        <p>article.description</p>
+      <div id="viewFour"  ng-repeat="article in nbaArray | filter: search:strict | orderBy: 'pubDate':true">
+          <i class="fa fa-star star growStar"></i>
+      <a href="{{article.link}}"><h3>{{article.title}}</h3></a>
+      <p class="views">
+        {{article.pubDate}}
+      </p>
+      <p class="views">{{article.description}}</p>
+      </div>
+      </div>
+      </script>
+
+      <script type="text/ng-template" id="extra.tpl.html">
+      <div class="contain">
+      <div id="viewFive"  ng-repeat="article in extraArray | filter: search:strict | orderBy: 'pubDate':true">
+          <i class="fa fa-star star growStar"></i>
+      <a href="{{article.link}}"><h3>{{article.title}}</h3></a>
+      <p class="views">
+        {{article.pubDate}}
+      </p>
+      <p class="views">{{article.description}}</p>
       </div>
       </div>
       </script>

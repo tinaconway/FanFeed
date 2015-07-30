@@ -27,7 +27,8 @@
     "angular-google-maps": "~2.1.5",
     "octicons": "~2.4.1",
     "bootstrap": "~3.3.5",
-    "checklist-model": "~0.2.4"
+    "checklist-model": "~0.2.4",
+    "moment": "~2.10.6"
   },
   "resolutions": {
     "angular-animate": "~1.3.14",
