@@ -1,3 +1,22 @@
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '448765281970324',
+      xfbml      : true,
+      status     : true,
+      cookie     : true,
+      version    : 'v2.4'
+    });
+
+  };
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
 
 <div class="background-image-main">
   <div ng-controller="FeedController" >
@@ -25,6 +44,7 @@
             {{article.pubDate}}
           </p>
         	<p class="views">{{article.description}}</p>
+          <button type="button" class="share" name="button" ng-click="share(article)">Share</button>
     		</div>
         </div>
     	</script>

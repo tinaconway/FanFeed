@@ -1369,13 +1369,15 @@ var extra;
     }
 
   var getStarred = function() {
-    var url = 'http://tiy-fee-rest.herokuapp.com/collections/fanfeedtest';
+      var id = localStorage.getItem('userId');
+    var url = '/api/collections' + '/' + id;
     return $http.get(url);
 
   };
   var addToStarred = function(article) {
     console.log('i am in add to starred');
-    var url = 'http://tiy-fee-rest.herokuapp.com/collections/fanfeedtest';
+    var id = localStorage.getItem('userId');
+    var url = '/api/collections' + '/' + id;
     return $http.get(url).then(function(starred) {
       if (starred.data.length < 1) {
         $http.post(url, article);
@@ -1389,7 +1391,8 @@ var extra;
     })
   };
   var deleteStarred = function(article) {
-    var url = 'http://tiy-fee-rest.herokuapp.com/collections/fanfeedtest';
+      var id = localStorage.getItem('userId');
+    var url = '/api/collections' + '/' + id;
     $http.delete(url + '/' + article._id).success(function() {
         $rootScope.$broadcast('article:deleted');
     });

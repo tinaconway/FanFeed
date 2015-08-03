@@ -14,6 +14,14 @@ angular.module('feed')
    $scope.delete = function(article){
       FeedService.deleteStarred(article)
   };
+  $scope.share = function(article) {
+    console.log(article);
+  FB.ui({method: 'feed',
+  name: article.title,
+  link: article.link ,
+  message: 'AAA'});
+  return false;
+  }
     $scope.isAuthenticated = function() {
     return $auth.isAuthenticated();
     };

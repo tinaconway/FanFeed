@@ -7,6 +7,7 @@ angular.module('auth')
           password: $scope.password
         })
         .then(function(res) {
+          localStorage.setItem('userId', res.data.currentUser);
           console.log(res.data);
           $alert({
             content: 'You have successfully logged in',

@@ -41,7 +41,7 @@ router.route('/login')
         if (!isMatch) {
           return res.status(401).send({ message: 'Wrong email and/or password' });
         }
-        res.send({ token: createToken(user) });
+        res.send({ token: createToken(user), currentUser: user._id });
       });
     });
   });
@@ -66,7 +66,7 @@ router.route('/login')
         password: req.body.password,
       });
       user.save(function() {
-        res.send({ token: createToken(user) });
+        res.send({ token: createToken(user), currentUser: user._id });
       });
     });
   });
@@ -114,7 +114,7 @@ router.route('/login')
               user.displayName = user.displayName || profile.name;
               user.save(function() {
                 var token = createToken(user);
-                res.send({ token: token });
+                res.send({ token: token, currentUser: user._id   });
               });
             });
           });

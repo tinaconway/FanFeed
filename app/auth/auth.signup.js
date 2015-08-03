@@ -6,6 +6,7 @@ angular.module('auth')
         email: $scope.email,
         password: $scope.password
       }).catch(function(response) {
+        localStorage.setItem('userId', res.data.currentUser);
         if (typeof response.data.message === 'object') {
           angular.forEach(response.data.message, function(message) {
             $alert({
