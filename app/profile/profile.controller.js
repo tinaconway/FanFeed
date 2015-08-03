@@ -150,8 +150,7 @@ $rootScope.rolesNBA2 = [
     'NFL Headlines',
     'MLB Headlines',
     'NHL Headlines',
-    'NBA Headlines',
-    'Fantasy News'
+    'NBA Headlines'
   ];
 
 $scope.saveTeams = function(users) {
