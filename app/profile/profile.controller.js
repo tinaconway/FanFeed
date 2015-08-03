@@ -155,6 +155,7 @@ $rootScope.rolesNBA2 = [
   ];
 
 $scope.saveTeams = function(users) {
+
   Account.updateProfile({
     displayName: $scope.user.displayName,
     email: $scope.user.email,
@@ -163,9 +164,6 @@ $scope.saveTeams = function(users) {
     favoriteNHL: users.rolesNHL || [],
     favoriteNBA: users.rolesNBA || [],
     favoriteExtra: users.rolesExtra || []
-  }).then(function() {
-    $rootScope.$broadcast('preference:changed')
-    console.log($rootScope.$broadcast('preference:changed'));
   })
 };
       /**
@@ -209,10 +207,15 @@ $scope.saveTeams = function(users) {
       /**
        * Update user's profile information.
        */
-      $scope.updateProfile = function() {
+      $scope.updateProfile = function(users) {
         Account.updateProfile({
           displayName: $scope.user.displayName,
-          email: $scope.user.email
+          email: $scope.user.email,
+          favoriteNFL: users.rolesNFL || [],
+          favoriteMLB: users.rolesMLB || [],
+          favoriteNHL: users.rolesNHL || [],
+          favoriteNBA: users.rolesNBA || [],
+          favoriteExtra: users.rolesExtra || []
         }).then(function() {
           $alert({
             content: 'Profile has been updated',

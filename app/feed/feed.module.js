@@ -3,15 +3,19 @@
 
   angular
     .module('feed', [
-      'ngRoute'
+      'ngRoute',
+      'toaster',
+      'ngAnimate'
     ])
     .config(function($routeProvider) {
 
       $routeProvider
-        .when('/feed', {
-          templateUrl: 'feed/views/feed.html',
+        .when('/starred', {
+          templateUrl: 'feed/views/starred.html',
           controller: 'FeedController'
         })
+
+
 
 
     });

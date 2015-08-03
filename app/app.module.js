@@ -6,13 +6,26 @@ angular.module('MyApp', [
   'auth',
   'profile',
   'posts',
-  'feed'
+  'feed',
+  'toaster'
 ])
 
 .config(function($routeProvider) {
   $routeProvider
     .when('/', {
-      templateUrl: 'home/views/home.html'
+      templateUrl: 'home/views/home.html',
+      resolve: {
+        checkAuth: function ($auth, $q, $location) {
+          var dfd = $q.defer();
+          if(!$auth.isAuthenticated()) {
+            $location.path('/login');
+          } else {
+            dfd.resolve();
+          }
+          return dfd.promise;
+
+        }
+      }
     })
     .when('/404', {
       template: '<h1>Sorry, page not found</h1>'

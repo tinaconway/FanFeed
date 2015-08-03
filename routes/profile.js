@@ -8,18 +8,18 @@ var request = require('request');
 router.route('/getFeeds')
   .all(ensureAuthenticated)
   .get(function (req, res) {
-
-    var nflTeams = {
-      "pittsburg_steelers": {
-        url: "myurl"
-        name: "Pittsburgh Steelers"
-      }
-    }
-    function getTeam(teamSlug) {
-      return nflTeams[teamSlug]
-    }
-
-    getTeam("pittsburg_steelers").url
+    // 
+    // var nflTeams = {
+    //   "pittsburg_steelers": {
+    //     url: "myurl"
+    //     name: "Pittsburgh Steelers"
+    //   }
+    // }
+    // function getTeam(teamSlug) {
+    //   return nflTeams[teamSlug]
+    // }
+    //
+    // getTeam("pittsburg_steelers").url
 
     User.findById(req.user, function (err, user) {
       user.favoriteNFL.forEach(function (el) {

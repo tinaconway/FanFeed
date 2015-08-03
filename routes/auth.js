@@ -37,6 +37,7 @@ router.route('/login')
         return res.status(401).send({ message: 'Wrong email and/or password' });
       }
       user.comparePassword(req.body.password, function(err, isMatch) {
+        console.log('password match?', isMatch);
         if (!isMatch) {
           return res.status(401).send({ message: 'Wrong email and/or password' });
         }

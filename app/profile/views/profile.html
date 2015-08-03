@@ -6,12 +6,8 @@
     <div class="panel-heading">Profile</div>
 
     <div class="panel-body">
-<!--       <legend><i class="ion-clipboard"></i> Edit My Profile</legend> -->
-      <form method="post" ng-submit="updateProfile()">
-      <!--   <div class="form-group">
-        <label class="control-label">Profile Picture</label>
-        <img class="profile-picture" ng-src="{{user.picture || 'http://placehold.it/100x100'}}">
-      </div> -->
+      <form method="post" ng-submit="updateProfile(users)">
+
         <div class="form-group">
           <label class="control-label"><i class="ion-person"></i> Display Name</label>
           <input type="text" class="form-control" ng-model="user.displayName" />

@@ -1,4 +1,4 @@
-<div class="background-image-main">
+<!-- <div class="background-image-main">
       <div id="tabs" class="panel panel-default feed-news">
           <ul class="feed-ul nav nav-tabs">
               <li role="presentation" class="tab feed-li" ng-repeat="tab in tabs"
@@ -13,20 +13,25 @@
 
 
 
-      <script type="text/ng-template" id="nfl.tpl.html">
-    		<div class="contain">
+      <script type="text/ng-template" id="nfl.tpl.html" >
+        <div class="contain">
+
         <div id="viewOne"  ng-repeat="article in nflArray | filter: search:strict | orderBy: 'pubDate':true">
-        <i class="fa fa-star star growStar"></i>
-    			<a href="{{article.link}}"><h3>{{article.title}}</h3></a>
+
+        <toaster-container toaster-options="{'time-out': 500, 'animation-class': 'toast-top-center'}"></toaster-container>
+        <i class="fa fa-star star growStar" ng-click="pop()"></i>
+
+          <a href="{{article.link}}"><h3>{{article.title}}</h3></a>
           <p class="views">
             {{article.pubDate}}
           </p>
-        	<p class="views">{{article.description}}</p>
-    		</div>
+          <p class="views">{{article.description}}</p>
         </div>
-    	</script>
+        </div>
+      </script>
 
-    	<script type="text/ng-template" id="mlb.tpl.html">
+
+      <script type="text/ng-template" id="mlb.tpl.html">
       <div class="contain">
       <div id="viewTwo"  ng-repeat="article in mlbArray | filter: search:strict | orderBy: 'pubDate':true">
           <i class="fa fa-star star growStar"></i>
@@ -37,9 +42,9 @@
       <p class="views">{{article.description}}</p>
       </div>
       </div>
-    	</script>
+      </script>
 
-    	<script type="text/ng-template" id="nhl.tpl.html">
+      <script type="text/ng-template" id="nhl.tpl.html">
       <div class="contain">
       <div id="viewThree"  ng-repeat="article in nhlArray | filter: search:strict | orderBy: 'pubDate':true">
           <i class="fa fa-star star growStar"></i>
@@ -50,7 +55,7 @@
       <p class="views">{{article.description}}</p>
       </div>
       </div>
-    	</script>
+      </script>
 
       <script type="text/ng-template" id="nba.tpl.html">
       <div class="contain">
@@ -80,3 +85,4 @@
 
 
 </div>
+ -->

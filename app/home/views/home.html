@@ -1,43 +1,100 @@
-<div class="background-image-main" ng-controller="FeedController">
-<div class="container" ng-if="!isAuthenticated()" ng-controller="LoginCtrl">
-  <div class="row">
-    <div class="center-form panel">
-      <div class="panel-body">
-        <h2 class="text-center">Log in</h2>
-        <form method="post" ng-submit="login()" name="loginForm">
-          <div class="form-group has-feedback">
-            <input class="form-control input-lg" type="text" name="email" ng-model="email" placeholder="Email" required autofocus>
-            <span class="ion-at form-control-feedback"></span>
+
+<div class="background-image-main">
+  <div ng-controller="FeedController" >
+      <div id="tabs" class="panel panel-default feed-news" >
+          <ul class="feed-ul nav nav-tabs">
+              <li role="presentation" class="tab feed-li" ng-repeat="tab in tabs"
+                  ng-class="{active:isActiveTab(tab.url)}"
+                  ng-click="onClickTab(tab)">{{tab.title}}</li>
+                  <input type="text" ng-model="search.title" class="filter" name="name" val="" placeholder="Search" size="40">
+          </ul>
+          <div id="mainView">
+              <div ng-include="currentTab"></div>
           </div>
-
-          <div class="form-group has-feedback">
-            <input class="form-control input-lg" type="password" name="password" ng-model="password" placeholder="Password" required>
-            <span class="ion-key form-control-feedback"></span>
-          </div>
-
-          <button type="submit" ng-disabled="loginForm.$invalid" class="btn btn-lg  btn-block btn-success">Log in</button>
-
-          <br/>
-
-          <p class="text-center">
-            <a href="#">Forgot your password?</a>
-          </p>
-
-          <p class="text-center text-muted">
-            <small>Don't have an account yet? <a href="/#/signup">Sign up</a></small>
-          </p>
-
-          <div class="signup-or-separator">
-            <h6 class="text">or</h6>
-            <hr>
-          </div>
-        </form>
-        <button class="btn btn-block btn-google-plus color" ng-click="authenticate('google')">
-          <span class="ion-social-googleplus"></span>Sign in with Google
-        </button>
       </div>
-    </div>
-  </div>
+
+
+
+      <script type="text/ng-template" id="nfl.tpl.html" >
+    		<div class="contain">
+        <div id="viewOne"  ng-repeat="article in nflArray | filter: search:strict | orderBy: 'pubDate':true">
+    <toaster-container toaster-options="{'time-out': 1000}"></toaster-container>
+        <button type="button" class="star" ><i class="fa fa-star star growStar" ng-click="add(article)"></i></button>
+    			<a href="{{article.link}}"><h3>{{article.title}}</h3></a>
+          <p class="views">
+            {{article.pubDate}}
+          </p>
+        	<p class="views">{{article.description}}</p>
+    		</div>
+        </div>
+    	</script>
+
+
+    	<script type="text/ng-template" id="mlb.tpl.html">
+      <div class="contain">
+      <div id="viewTwo"  ng-repeat="article in mlbArray | filter: search:strict | orderBy: 'pubDate':true">
+      <toaster-container toaster-options="{'time-out': 1000}"></toaster-container>
+          <button type="button" class="star" ><i class="fa fa-star star growStar" ng-click="add(article)"></i></button>
+      <a href="{{article.link}}"><h3>{{article.title}}</h3></a>
+      <p class="views">
+        {{article.pubDate}}
+      </p>
+      <p class="views">{{article.description}}</p>
+      </div>
+      </div>
+    	</script>
+
+    	<script type="text/ng-template" id="nhl.tpl.html">
+      <div class="contain">
+      <div id="viewThree"  ng-repeat="article in nhlArray | filter: search:strict | orderBy: 'pubDate':true">
+      <toaster-container toaster-options="{'time-out': 1000}"></toaster-container>
+          <button type="button" class="star" ><i class="fa fa-star star growStar" ng-click="add(article)"></i></button>
+      <a href="{{article.link}}"><h3>{{article.title}}</h3></a>
+      <p class="views">
+        {{article.pubDate}}
+      </p>
+      <p class="views">{{article.description}}</p>
+      </div>
+      </div>
+    	</script>
+
+      <script type="text/ng-template" id="nba.tpl.html">
+      <div class="contain">
+      <div id="viewFour"  ng-repeat="article in nbaArray | filter: search:strict | orderBy: 'pubDate':true">
+      <toaster-container toaster-options="{'time-out': 1000}"></toaster-container>
+          <button type="button" class="star" ><i class="fa fa-star star growStar" ng-click="add(article)"></i></button>
+      <a href="{{article.link}}"><h3>{{article.title}}</h3></a>
+      <p class="views">
+        {{article.pubDate}}
+      </p>
+      <p class="views">{{article.description}}</p>
+      </div>
+      </div>
+      </script>
+
+      <script type="text/ng-template" id="extra.tpl.html">
+      <div class="contain">
+      <div id="viewFive"  ng-repeat="article in extraArray | filter: search:strict | orderBy: 'pubDate':true">
+      <toaster-container toaster-options="{'time-out': 1000}"></toaster-container>
+          <button type="button" class="star" ><i class="fa fa-star star growStar" ng-click="add(article)"></i></button>
+      <a href="{{article.link}}"><h3>{{article.title}}</h3></a>
+      <p class="views">
+        {{article.pubDate}}
+      </p>
+      <p class="views">{{article.description}}</p>
+      </div>
+      </div>
+      </script>
+
+      <script type="text/ng-template" id="setup.tpl.html" >
+        <div class="contain">
+        <div id="viewSix">
+        <h3 class="get-started">To get started, add your favorite teams to your <a href="/#/profile" >profile</a>!</h3>
+        </div>
+        </div>
+      </script>
+
+</div>
 </div>
 
 
