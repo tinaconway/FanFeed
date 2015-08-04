@@ -918,16 +918,20 @@ button.toast-close-button {
     font-size: 1.2em; }
 
   .home-main {
-    font-size: .7em; }
+    font-size: 1em;
+    width: 130px; }
 
   .starred {
-    font-size: .7em; }
+    font-size: 1em;
+    width: 160px; }
 
   .profile {
-    font-size: .7em; }
+    font-size: 1em;
+    width: 140px; }
 
   .logout {
-    font-size: .7em; }
+    font-size: 1em;
+    width: 130px; }
 
   .title {
     font-size: 2.7em;
@@ -961,4 +965,7 @@ button.toast-close-button {
     height: 1200px; }
 
   .feed-news {
-    width: 85%; } }
+    width: 85%; }
+
+  .tab {
+    font-size: 2.8em; } }
