@@ -876,7 +876,26 @@ button.toast-close-button {
     font-size: 2.8em; }
 
   .fa-rss {
+    font-size: 2.8em; } }
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .background-image-main {
+    height: 1900px; }
+
+  .background-image {
+    height: 1900px; }
+
+  .center-form {
+    width: 60%; }
+
+  .sign-up {
+    width: 200px;
+    font-size: 1.2em; }
+
+  .home {
+    font-size: 1.2em; }
+
+  .title {
     font-size: 2.8em; }
 
-  .background-image-main {
-    height: 1500px; } }
+  .fa-rss {
+    font-size: 2.8em; } }
