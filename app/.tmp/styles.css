@@ -972,4 +972,7 @@ button.toast-close-button {
     font-size: 2em; }
 
   .check {
-    height: 688px; } }
+    height: 600px; }
+
+  .save-button {
+    margin-bottom: 5px; } }
