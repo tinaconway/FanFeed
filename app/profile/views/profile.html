@@ -25,7 +25,7 @@
     <div class="panel-heading">Team Preferences</div>
     <div class="panel-body">
     <input ng-click="clicked= !clicked" type="button" class="dropdown" value="NFL">
-    <div ng-show="clicked" class="ng-hide panel-body">
+    <div ng-show="clicked" class="ng-hide panel-body check">
 
       <div class="checkboxList">
       <label ng-repeat="role in rolesNFL">
@@ -42,7 +42,7 @@
     </div>
 
     <input ng-click="clicked1= !clicked1" type="button" class="dropdown" value="MLB">
-    <div ng-show="clicked1" class="ng-hide panel-body">
+    <div ng-show="clicked1" class="ng-hide panel-body check">
       <div class="checkboxList">
       <label ng-repeat="role in rolesMLB">
           <input type="checkbox" checklist-model="users.rolesMLB" checklist-value="role"> {{role}}
@@ -58,7 +58,7 @@
 
 
     <input ng-click="clicked2= !clicked2" type="button" class="dropdown" value="NHL">
-    <div ng-show="clicked2" class="ng-hide panel-body">
+    <div ng-show="clicked2" class="ng-hide panel-body check">
       <div class="checkboxList">
       <label ng-repeat="role in rolesNHL">
           <input type="checkbox" checklist-model="users.rolesNHL" checklist-value="role"> {{role}}
@@ -73,7 +73,7 @@
   <input class="save-button btn grow" ng-click="saveTeams(users)" type="button" value="Save">
     </div>
   <input ng-click="clicked3= !clicked3" type="button" class="dropdown" value="NBA">
-    <div ng-show="clicked3" class="ng-hide panel-body">
+    <div ng-show="clicked3" class="ng-hide panel-body check">
       <div class="checkboxListNBA">
       <label ng-repeat="role in rolesNBA">
           <input type="checkbox" checklist-model="users.rolesNBA" checklist-value="role"> {{role}}
@@ -88,7 +88,7 @@
     <input class="save-button btn grow" ng-click="saveTeams(users)" type="button" value="Save">
     </div>
     <input ng-click="clicked4= !clicked4" type="button" class="dropdown" value="Extras">
-      <div ng-show="clicked4" class="ng-hide panel-body">
+      <div ng-show="clicked4" class="ng-hide panel-body check">
         <div class="checkboxListExtra">
         <label ng-repeat="role in rolesExtra">
             <input type="checkbox" checklist-model="users.rolesExtra" checklist-value="role"> {{role}}

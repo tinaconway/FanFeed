@@ -969,4 +969,7 @@ button.toast-close-button {
     width: 85%; }
 
   .tab {
-    font-size: 2em; } }
+    font-size: 2em; }
+
+  .check {
+    height: 688px; } }
