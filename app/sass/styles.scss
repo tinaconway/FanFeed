@@ -1008,7 +1008,8 @@ cursor: pointer;
       height: 1900px;
     }
     .center-form {
-      width: 60%;
+      width: 400px;
+      height: 450px;
     }
     .sign-up {
       width: 200px;
@@ -1018,11 +1019,30 @@ cursor: pointer;
       font-size: 1.2em;
     }
 
-      .title {
-        font-size: 2.8em;
-      }
+    .title {
+      font-size: 3.5em;
+      padding-right: 5px;
+      vertical-align: bottom;
+    }
 
-      .fa-rss {
-        font-size: 2.8em;
-      }
+    .fa-rss {
+      font-size: 3.4em;
+    }
+    .text-center {
+      font-size: 4em;
+      padding-bottom: 15px;
+    }
+    .text-centered {
+      font-size: 1.5em;
+    }
+    .login-button {
+      font-size: 1.5em;
+    }
+    .form-control {
+      font-size: 1.7em;
+
+    }
+    .form-control-feedback {
+      font-size: 1.7em;
+    }
 }
