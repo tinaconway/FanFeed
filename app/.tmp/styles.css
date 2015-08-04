@@ -571,6 +571,24 @@ button:focus {
   font-weight: bold;
   padding: 5px; }
 
+.home {
+  font-size: 1.7em; }
+
+.sign-up {
+  font-size: 1.7em; }
+
+.profile {
+  font-size: 1.2em; }
+
+.logout {
+  font-size: 1.2em; }
+
+.starred {
+  font-size: 1.2em; }
+
+.home-main {
+  font-size: 1.2em; }
+
 #viewOne, #viewTwo, #viewThree, #viewFour, #viewFive {
   font-family: 'Lato', sans-serif;
   padding: 20px;
@@ -888,12 +906,28 @@ button.toast-close-button {
     width: 400px;
     height: 450px; }
 
+  .centered-form {
+    width: 65%;
+    margin: 2.5% auto; }
+
   .sign-up {
     width: 200px;
     font-size: 1.2em; }
 
   .home {
     font-size: 1.2em; }
+
+  .home-main {
+    font-size: .7em; }
+
+  .starred {
+    font-size: .7em; }
+
+  .profile {
+    font-size: .7em; }
+
+  .logout {
+    font-size: .7em; }
 
   .title {
     font-size: 2.7em;
@@ -921,4 +955,10 @@ button.toast-close-button {
     font-size: 1.7em; }
 
   .link-to-home {
-    width: 450px; } }
+    width: 450px; }
+
+  .contain {
+    height: 1200px; }
+
+  .feed-news {
+    width: 85%; } }
