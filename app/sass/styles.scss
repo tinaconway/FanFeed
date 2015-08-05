@@ -1007,25 +1007,94 @@ cursor: pointer;
 
 }
 @media screen and (max-width: 600px) {
-  .center-form {
-  width: 67%;
+/*   .center-form {
+width: 67%;
+}
+.sign-up {
+  width: 200px;
+  font-size: 1.7em;
+}
+.home {
+  font-size: 1.7em;
+}
+
+  .title {
+    font-size: 4em;
   }
-  .sign-up {
-    width: 200px;
-    font-size: 1.7em;
+
+  .fa-rss {
+    font-size: 4em;
+  } */
+  .center-form {
+  width: 75%;
+  }
+  .navbar-default .navbar-nav > li > a {
+    font-size: 1.5em;
+  }
+  .nav-head {
+    padding-left: 0;
+    float: left;
   }
   .home {
-    font-size: 1.7em;
+    margin-right: 20px
+  }
+  .title {
+    font-size: 3em;
+    display: inline-block;
+  }
+  .home-main {
+    font-size: 1.4em;
+  }
+  .starred {
+  font-size: 1.4em;
+  margin-left: 5px;
+  }
+  .profile {
+  font-size: 1.4em;
+  margin-left: 5px;
+  }
+  .logout {
+  font-size: 1.4em;
+  margin-left: 5px !important;
+  margin-right: 5px !important;
+
+  }
+  .fa-rss {
+  display: none;
   }
 
-    .title {
-      font-size: 4em;
-    }
+  .feed-news {
+    width: 95%;
+  }
+  .tab {
+    font-size: 1em;
+    margin-bottom: 5px;
+  }
+  .filter {
+    float: none;
+    margin-top: 5px;
+  }
+  .pull-right {
+    float: none !important;
+  }
+  .checkboxList {
+    height: 470px;
+  }
+  .checkboxListNBA {
+    height: 465px;
+  }
+  .fb {
+  width: 15%;
+  }
+  .checkboxList30 {
+    height: 436px;
+  }
 
-    .fa-rss {
-      font-size: 4em;
-    }
-
+  .nav-head > li > a:hover,
+  .nav-head > li > a:focus {
+    color: red;
+    background-color: transparent;
+  }
 }
 
 
@@ -1033,10 +1102,6 @@ cursor: pointer;
 @media screen and (max-width: 500px) {
     .center-form {
     width: 75%;
-    }
-    .centered-form {
-      width: 65%;
-      margin: 2.5% auto;
     }
     .navbar-default .navbar-nav > li > a {
       font-size: 1.5em;
