@@ -926,18 +926,18 @@ button.toast-close-button {
     display: inline-block; }
 
   .home-main {
-    font-size: 1em; }
+    font-size: 1.5em; }
 
   .starred {
-    font-size: 1em;
+    font-size: 1.5em;
     margin-left: 10px; }
 
   .profile {
-    font-size: 1em;
+    font-size: 1.5em;
     margin-left: 10px; }
 
   .logout {
-    font-size: 1em;
+    font-size: 1.5em;
     margin-left: 10px !important;
     margin-right: 10px !important; }
 
@@ -959,7 +959,7 @@ button.toast-close-button {
     float: none !important; }
 
   .checkboxList {
-    height: 500px; } }
+    height: 480px; } }
 /* @media only screen
   and (min-device-width: 320px)
   and (max-device-width: 480px)
