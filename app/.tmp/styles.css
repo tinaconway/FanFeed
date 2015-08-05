@@ -884,7 +884,8 @@ button.toast-close-button {
     width: 75%; }
 
   .navbar-default .navbar-nav > li > a {
-    font-size: .9em; }
+    font-size: 1.3em;
+    padding-right: 5px; }
 
   .title {
     font-size: 2em; }
