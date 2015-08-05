@@ -926,20 +926,20 @@ button.toast-close-button {
     display: inline-block; }
 
   .home-main {
-    font-size: .9em; }
+    font-size: 1em; }
 
   .starred {
-    font-size: .9em;
-    margin-left: 20px; }
+    font-size: 1em;
+    margin-left: 10px; }
 
   .profile {
-    font-size: .9em;
-    margin-left: 30px; }
+    font-size: 1em;
+    margin-left: 10px; }
 
   .logout {
-    font-size: .9em;
-    margin-left: 30px !important;
-    margin-right: 30px !important; }
+    font-size: 1em;
+    margin-left: 10px !important;
+    margin-right: 10px !important; }
 
   .fa-rss {
     display: none; }
@@ -959,7 +959,7 @@ button.toast-close-button {
     float: none !important; }
 
   .checkboxList {
-    height: 320px; } }
+    height: 500px; } }
 /* @media only screen
   and (min-device-width: 320px)
   and (max-device-width: 480px)
