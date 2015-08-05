@@ -19,7 +19,7 @@
 </script>
 
 <div class="background-image-main">
-  <div ng-controller="FeedController" >
+  <div>
       <div id="tabs" class="panel panel-default feed-news" >
           <ul class="feed-ul nav nav-tabs">
               <li role="presentation" class="tab feed-li" ng-repeat="tab in tabs"
@@ -75,6 +75,7 @@
         {{article.pubDate}}
       </p>
       <p class="views">{{article.description}}</p>
+        <img class="fb" src="http://shopify.barrelny.com/wp-content/uploads/2014/06/facebook-share-button.png" ng-click="share(article)" alt="" />
       </div>
       </div>
     	</script>

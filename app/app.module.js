@@ -14,6 +14,7 @@ angular.module('MyApp', [
   $routeProvider
     .when('/', {
       templateUrl: 'home/views/home.html',
+      controller: 'FeedController',
       resolve: {
         checkAuth: function ($auth, $q, $location) {
           var dfd = $q.defer();

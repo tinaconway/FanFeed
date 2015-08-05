@@ -8,7 +8,7 @@
       'ngAnimate'
     ])
     .config(function($routeProvider) {
-
+      
       $routeProvider
         .when('/starred', {
           templateUrl: 'feed/views/starred.html',

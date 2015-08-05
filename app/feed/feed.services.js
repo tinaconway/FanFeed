@@ -1375,18 +1375,17 @@ var extra;
 
   };
   var addToStarred = function(article) {
-    console.log('i am in add to starred');
     var id = localStorage.getItem('userId');
     var url = '/api/collections' + '/' + id;
     return $http.get(url).then(function(starred) {
       if (starred.data.length < 1) {
         $http.post(url, article);
-      }
+      };
       starred.data.forEach(function(el) {
-        if (el.title !== "article.title") {
+        if (el.title !== article.title) {
           console.log('im in post');
           return $http.post(url, article);
-        }
+        };
       });
     })
   };

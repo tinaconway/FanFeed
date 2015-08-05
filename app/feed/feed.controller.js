@@ -15,7 +15,6 @@ angular.module('feed')
       FeedService.deleteStarred(article)
   };
   $scope.share = function(article) {
-    console.log(article);
   FB.ui({method: 'feed',
   name: article.title,
   link: article.link ,
@@ -26,7 +25,6 @@ angular.module('feed')
     return $auth.isAuthenticated();
     };
     if($routeParams && $auth.isAuthenticated) {
-      console.log('in $routeParams');
         FeedService.getNFL().then(function(data) {
           var nflArr = [];
           var promisesNFL = [];
@@ -40,7 +38,6 @@ angular.module('feed')
           })
           $q.all(promisesNFL).then(function (results) {
             $scope.nflArray = [];
-            console.log('NFL Array ', nflArr);
             nflArr.forEach(function(el) {
               el.forEach(function(elm) {
                 var postDate = new Date(elm.pubDate);
@@ -65,7 +62,6 @@ angular.module('feed')
           })
           $q.all(promisesMLB).then(function (results) {
             $scope.mlbArray = [];
-            console.log('MLB Array ', mlbArr);
             mlbArr.forEach(function(el) {
               el.forEach(function(elm) {
                 var postDate = new Date(elm.pubDate);
@@ -151,7 +147,6 @@ angular.module('feed')
     };
 if($auth.isAuthenticated()) {
 FeedService.getProfile().then(function(teams) {
-  console.log(teams);
 $scope.tabs = [];
     if (tabObj.nfl.length < 1 && tabObj.mlb.length < 1 && tabObj.nhl.length < 1 && tabObj.nba.length < 1 && tabObj.extra.length < 1) {
       $scope.tabs.push({
@@ -366,7 +361,6 @@ if (teams.nfl) {
           })
           $q.all(promisesMLB).then(function (results) {
             $scope.mlbArray = [];
-            console.log('MLB Array ', mlbArr);
             mlbArr.forEach(function(el) {
               el.forEach(function(elm) {
                 var postDate = new Date(elm.pubDate);
