@@ -915,7 +915,8 @@ button.toast-close-button {
     font-size: 1.5em; }
 
   .nav-head {
-    padding-left: 0; }
+    padding-left: 0;
+    float: left; }
 
   .home {
     margin-right: 20px; }
@@ -925,19 +926,20 @@ button.toast-close-button {
     display: inline-block; }
 
   .home-main {
-    font-size: .8em; }
+    font-size: .9em; }
 
   .starred {
-    font-size: .8em;
+    font-size: .9em;
     margin-left: 10px; }
 
   .profile {
-    font-size: .8em;
+    font-size: .9em;
     margin-left: 10px; }
 
   .logout {
-    font-size: .8em;
-    margin-left: 10px; }
+    font-size: .9em;
+    margin-left: 10px !important;
+    margin-right: 10px !important; }
 
   .fa-rss {
     display: none; }
