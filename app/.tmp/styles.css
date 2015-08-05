@@ -502,6 +502,16 @@ span {
   height: 230px;
   font-size: 1.2em; }
 
+.checkboxList30 {
+  text-align: left;
+  background-color: #fff;
+  color: #000;
+  display: inline-block;
+  font-weight: 100;
+  width: 320px;
+  height: 230px;
+  font-size: 1.2em; }
+
 .checkboxListNBA {
   text-align: left;
   background-color: #fff;
@@ -966,8 +976,16 @@ button.toast-close-button {
   .checkboxList {
     height: 470px; }
 
+  .checkboxListNBA {
+    height: 450px; }
+
   .fb {
     width: 15%; }
 
   .checkboxList30 {
-    height: 450px; } }
+    height: 450px; }
+
+  .nav-head > li > a:hover,
+  .nav-head > li > a:focus {
+    color: red;
+    background-color: transparent; } }
