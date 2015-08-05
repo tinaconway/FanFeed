@@ -916,7 +916,7 @@ button.toast-close-button {
     display: none; }
 
   .feed-news {
-    width: 95%; }
+    width: 92%; }
 
   .tab {
     font-size: 1em;
@@ -924,7 +924,10 @@ button.toast-close-button {
 
   .filter {
     float: none;
-    margin-top: 5px; } }
+    margin-top: 5px; }
+
+  .pull-right {
+    float: none !important; } }
 /* @media only screen
   and (min-device-width: 320px)
   and (max-device-width: 480px)

@@ -1033,7 +1033,7 @@ cursor: pointer;
     }
 
     .feed-news {
-      width: 95%;
+      width: 92%;
     }
     .tab {
       font-size: 1em;
@@ -1042,6 +1042,9 @@ cursor: pointer;
     .filter {
       float: none;
       margin-top: 5px;
+    }
+    .pull-right {
+      float: none !important;
     }
 }
 /* @media only screen
