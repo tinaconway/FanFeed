@@ -153,6 +153,30 @@ h1 {
   text-shadow: 2px 2px 1px white;
   /* background-color: #fff; */ }
 
+.nav-head {
+  display: inline-block;
+  list-style-type: none;
+  width: 450px; }
+
+.nav-head a {
+  text-decoration: none;
+  color: white; }
+
+.home-main {
+  display: inline-block; }
+
+.starred {
+  display: inline-block;
+  margin-left: 10px; }
+
+.profile {
+  display: inline-block;
+  margin-left: 10px; }
+
+.logout {
+  display: inline-block;
+  margin-left: 10px; }
+
 .brandWrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -916,7 +940,7 @@ button.toast-close-button {
     display: none; }
 
   .feed-news {
-    width: 92%; }
+    width: 95%; }
 
   .tab {
     font-size: 1em;
