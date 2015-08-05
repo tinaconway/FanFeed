@@ -922,18 +922,18 @@ button.toast-close-button {
     display: inline-block; }
 
   .home-main {
-    font-size: 1.2em; }
+    font-size: .8em; }
 
   .starred {
-    font-size: 1.2em;
+    font-size: .8em;
     margin-left: 10px; }
 
   .profile {
-    font-size: 1.2em;
+    font-size: .8em;
     margin-left: 10px; }
 
   .logout {
-    font-size: 1.2em;
+    font-size: .8em;
     margin-left: 10px; }
 
   .fa-rss {
