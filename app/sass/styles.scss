@@ -1014,36 +1014,34 @@ cursor: pointer;
     }
     .home-main {
       font-size: 1.2em;
-      margin-right: 10px;
     }
     .starred {
     font-size: 1.2em;
-    margin-right: 10px;
+    margin-left: 10px;
     }
     .profile {
     font-size: 1.2em;
-    margin-right: 10px;
+    margin-left: 10px;
     }
     .logout {
     font-size: 1.2em;
-    margin-right: 10px;
+    margin-left: 10px;
 
     }
     .fa-rss {
-      font-size: 2.4em;
       display: none;
     }
-    .link-to-home {
-      width: 150px;
-    }
+
     .feed-news {
       width: 95%;
     }
     .tab {
-      font-size: .8em;
+      font-size: 1em;
+      margin-bottom: 5px;
     }
     .filter {
       float: none;
+      margin-top: 5px;
     }
 }
 /* @media only screen
