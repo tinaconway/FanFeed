@@ -914,6 +914,9 @@ button.toast-close-button {
   .navbar-default .navbar-nav > li > a {
     font-size: 1.5em; }
 
+  .nav-head {
+    padding-left: 0; }
+
   .home {
     margin-right: 20px; }
 
