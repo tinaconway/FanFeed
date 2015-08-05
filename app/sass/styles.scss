@@ -995,25 +995,40 @@ cursor: pointer;
 
 
 @media screen and (max-width: 500px) {
-  .center-form {
-  width: 75%;
-  }
-  .centered-form {
-    width: 65%;
-    margin: 2.5% auto;
-  }
-  .navbar-default .navbar-nav > li > a {
-    font-size: 1.5em;
-  }
-  .home {
-    margin-right: 20px
-  }
-
+    .center-form {
+    width: 75%;
+    }
+    .centered-form {
+      width: 65%;
+      margin: 2.5% auto;
+    }
+    .navbar-default .navbar-nav > li > a {
+      font-size: 1.5em;
+    }
+    .home {
+      margin-right: 20px
+    }
     .title {
       font-size: 3em;
       display: inline-block;
     }
+    .home-main {
+      font-size: 1.2em;
+      margin-right: 10px;
+    }
+    .starred {
+    font-size: 1.2em;
+    margin-right: 10px;
+    }
+    .profile {
+    font-size: 1.2em;
+    margin-right: 10px;
+    }
+    .logout {
+    font-size: 1.2em;
+    margin-right: 10px;
 
+    }
     .fa-rss {
       font-size: 2.4em;
       display: none;
@@ -1021,7 +1036,15 @@ cursor: pointer;
     .link-to-home {
       width: 150px;
     }
-
+    .feed-news {
+      width: 95%;
+    }
+    .tab {
+      font-size: .8em;
+    }
+    .filter {
+      float: none;
+    }
 }
 /* @media only screen
   and (min-device-width: 320px)
