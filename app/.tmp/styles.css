@@ -95,7 +95,7 @@ h1 {
 
 .navbar-header {
   padding-left: 15px;
-  width: 35%;
+  width: 70%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -938,7 +938,7 @@ button.toast-close-button {
 
   .logout {
     font-size: .9em;
-    margin-left: 20px !important;
+    margin-left: 30px !important;
     margin-right: 30px !important; }
 
   .fa-rss {
@@ -958,8 +958,8 @@ button.toast-close-button {
   .pull-right {
     float: none !important; }
 
-  .check {
-    height: 600px; } }
+  .checkboxList {
+    height: 320px; } }
 /* @media only screen
   and (min-device-width: 320px)
   and (max-device-width: 480px)

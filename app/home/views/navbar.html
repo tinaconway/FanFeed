@@ -1,18 +1,14 @@
 <div ng-controller="NavbarCtrl" class="navbar navbar-default navbar-static-top">
   <div class="navbar-header">
 <a href="/#/" class="link-to-home"><span class="title">FanFeed</span><i class="fa fa-rss"></i></a>
-    <div class="brandWrapper">
-    </div>
   </div>
-  <ul id="headerLinks" class="nav navbar-nav">
-  </ul>
+
 
   <ul ng-if="!isAuthenticated()" class="nav navbar-nav pull-right">
     <li class="home"><a href="/#/">Home</a></li>
-<!--     <li><a href="/#/login">Login</a></li> -->
     <li class="sign-up"><a href="/#/signup">Sign up</a></li>
   </ul>
-  <ul ng-if="isAuthenticated()" class="nav navbar-nav pull-right">
+  <ul ng-if="isAuthenticated()" class="nav-head">
     <li class="home-main"><a href="/#/">Home</a></li>
     <li class="starred"><a href="/#/starred">Starred</a></li>
     <li class="profile"><a href="/#/profile">Profile</a></li>
