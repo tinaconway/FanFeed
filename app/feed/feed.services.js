@@ -192,15 +192,15 @@ var extra;
                }
                if (el === "Chicago Bears") {
                  nflArr.push({name: "Chicago Bears",
-                      url: ""})
+                      url: "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20rss%20where%20url%20%3D%20%22http%3A%2F%2Fwww.yardbarker.com%2Frss%2Fteam%2F50%22&format=json&diagnostics=true&callback=JSON_CALLBACK"})
                 }
                if (el === "San Diego Chargers") {
                  nflArr.push({name: "San Diego Chargers",
-                      url: ""})
+                      url: "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20rss%20where%20url%20%3D%20%22http%3A%2F%2Fwww.yardbarker.com%2Frss%2Fteam%2F45%22&format=json&diagnostics=true&callback=JSON_CALLBACK"})
                }
                if (el === "Seattle Seahawks") {
                 nflArr.push({name: "Seattle Seahawks",
-                      url: ""})
+                      url: "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20rss%20where%20url%20%3D%20%22http%3A%2F%2Fwww.yardbarker.com%2Frss%2Fteam%2F59%22&format=json&diagnostics=true&callback=JSON_CALLBACK"})
                }
           })
           teamObj.nfl = nflArr;
@@ -463,7 +463,7 @@ var extra;
                }
                if (el === "Philadelphia Flyers") {
                    nhlArr.push({name: "Philadelphia Flyers",
-                        url: "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20rss%20where%20url%20%3D%20%22http%3A%2F%2Fmlb.mlb.com%2Fpartnerxml%2Fgen%2Fnews%2Frss%2Ftex.xml%22&format=json&diagnostics=true&callback=JSON_CALLBACK"})
+                        url: "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20rss%20where%20url%20%3D%20%22http%3A%2F%2Fwww.yardbarker.com%2Frss%2Fteam%2F95%22&format=json&diagnostics=true&callback=JSON_CALLBACK"})
 
                }
                if (el === "San Jose Sharks") {
@@ -846,15 +846,15 @@ var extra;
              }
              if (el === "Chicago Bears") {
                nflArr.push({name: "Chicago Bears",
-                    url: ""})
+                    url: "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20rss%20where%20url%20%3D%20%22http%3A%2F%2Fwww.yardbarker.com%2Frss%2Fteam%2F50%22&format=json&diagnostics=true&callback=JSON_CALLBACK"})
               }
              if (el === "San Diego Chargers") {
                nflArr.push({name: "San Diego Chargers",
-                    url: ""})
+                    url: "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20rss%20where%20url%20%3D%20%22http%3A%2F%2Fwww.yardbarker.com%2Frss%2Fteam%2F45%22&format=json&diagnostics=true&callback=JSON_CALLBACK"})
              }
              if (el === "Seattle Seahawks") {
               nflArr.push({name: "Seattle Seahawks",
-                    url: ""})
+                    url: "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20rss%20where%20url%20%3D%20%22http%3A%2F%2Fwww.yardbarker.com%2Frss%2Fteam%2F59%22&format=json&diagnostics=true&callback=JSON_CALLBACK"})
              }
         })
         teamObj.nfl = nflArr;
@@ -1126,7 +1126,7 @@ var extra;
              }
              if (el === "Philadelphia Flyers") {
                  nhlArr.push({name: "Philadelphia Flyers",
-                      url: "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20rss%20where%20url%20%3D%20%22http%3A%2F%2Fmlb.mlb.com%2Fpartnerxml%2Fgen%2Fnews%2Frss%2Ftex.xml%22&format=json&diagnostics=true&callback=JSON_CALLBACK"})
+                      url: "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20rss%20where%20url%20%3D%20%22http%3A%2F%2Fwww.yardbarker.com%2Frss%2Fteam%2F95%22&format=json&diagnostics=true&callback=JSON_CALLBACK"})
 
              }
              if (el === "San Jose Sharks") {
@@ -1397,6 +1397,7 @@ var extra;
     });
 
   };
+
 
       return {
         getProfile: getProfile,
