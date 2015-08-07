@@ -54,7 +54,7 @@
       <div class="contain">
       <div id="viewTwo"  ng-repeat="article in mlbArray | filter: search:strict | orderBy: 'pubDate':true">
       <toaster-container toaster-options="{'time-out': 1000}"></toaster-container>
-          <button type="button" class="star" ><i title="Save Article" class="fa fa-star star growStar fa-border" ng-click="add(article)"></i></button>
+          <button type="button" class="star" ><i title="Save Article" class="fa fa-star-o star growStar fa-border" ng-click="add(article)"></i></button>
       <a href="{{article.link}}"><h3>{{article.title}}</h3></a>
       <p class="views">
         {{article.pubDate}}
@@ -69,7 +69,7 @@
       <div class="contain">
       <div id="viewThree"  ng-repeat="article in nhlArray | filter: search:strict | orderBy: 'pubDate':true">
       <toaster-container toaster-options="{'time-out': 1000}"></toaster-container>
-          <button type="button" class="star" ><i class="fa fa-star star growStar" ng-click="add(article)"></i></button>
+          <button type="button" class="star" ><i class="fa fa-star star-o growStar" ng-click="add(article)"></i></button>
       <a href="{{article.link}}"><h3>{{article.title}}</h3></a>
       <p class="views">
         {{article.pubDate}}
@@ -84,7 +84,7 @@
       <div class="contain">
       <div id="viewFour"  ng-repeat="article in nbaArray | filter: search:strict | orderBy: 'pubDate':true">
       <toaster-container toaster-options="{'time-out': 1000}"></toaster-container>
-          <button type="button" class="star" ><i class="fa fa-star star growStar" ng-click="add(article)"></i></button>
+          <button type="button" class="star" ><i class="fa fa-star star-o growStar" ng-click="add(article)"></i></button>
       <a href="{{article.link}}"><h3>{{article.title}}</h3></a>
       <p class="views">
         {{article.pubDate}}
@@ -99,7 +99,7 @@
       <div class="contain">
       <div id="viewFive"  ng-repeat="article in extraArray | filter: search:strict | orderBy: 'pubDate':true">
       <toaster-container toaster-options="{'time-out': 1000}"></toaster-container>
-          <button type="button" class="star" ><i class="fa fa-star star growStar" ng-click="add(article)"></i></button>
+          <button type="button" class="star" ><i class="fa fa-star star-o growStar" ng-click="add(article)"></i></button>
       <a href="{{article.link}}"><h3>{{article.title}}</h3></a>
       <p class="views">
         {{article.pubDate}}
