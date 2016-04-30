@@ -5,7 +5,6 @@ angular.module('feed')
   .controller('FeedController', function($scope, $auth, $window, $alert, $routeParams, $rootScope, FeedService, $q, $http, $cacheFactory, $sce, toaster) {
     FeedService.getStarred().success(function(starred) {
       $scope.starred = starred;
-      console.log(starred);
     });
     $scope.add = function(article){
        toaster.pop('note', "Added to Favorites");
@@ -30,11 +29,9 @@ angular.module('feed')
         FeedService.getNFL().then(function(data) {
           var nflArr = [];
           var promisesNFL = [];
-          console.log(data);
           data.nfl.forEach(function(el) {
             var deferred = $q.defer();
             $http.jsonp(el.url).then(function(data) {
-              console.log(data);
               nflArr.push(data.data.query.results.item);
               deferred.resolve(data);
             })

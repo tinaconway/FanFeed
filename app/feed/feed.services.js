@@ -1375,7 +1375,6 @@ var extra;
 
   };
   var addToStarred = function(article) {
-    console.log(article);
     var id = localStorage.getItem('userId');
     var url = '/api/collections' + '/' + id;
     return $http.get(url).then(function(starred) {

@@ -1,14 +1,12 @@
 angular.module('auth')
   .controller('LoginCtrl', function($scope, $alert, $auth, $location) {
     $scope.login = function() {
-      console.log('what is going on');
       $auth.login({
           email: $scope.email,
           password: $scope.password
         })
         .then(function(res) {
           localStorage.setItem('userId', res.data.currentUser);
-          console.log(res.data);
           $alert({
             content: 'You have successfully logged in',
             animation: 'fadeZoomFadeDown',
@@ -28,7 +26,6 @@ angular.module('auth')
     $scope.authenticate = function(provider) {
       $auth.authenticate(provider)
         .then(function(res) {
-          console.log(res.data);
           $alert({
             content: 'You have successfully logged in',
             animation: 'fadeZoomFadeDown',
