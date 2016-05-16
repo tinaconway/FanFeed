@@ -1,6 +1,16 @@
+var connection_string = 'mongodb://localhost:27017/test';
+
+if(process.env.OPENSHIFT_MONGODB_DB_PASSWORD){
+  connection_string = process.env.OPENSHIFT_MONGODB_DB_USERNAME + ":" +
+  process.env.OPENSHIFT_MONGODB_DB_PASSWORD + "@" +
+  process.env.OPENSHIFT_MONGODB_DB_HOST + ':' +
+  process.env.OPENSHIFT_MONGODB_DB_PORT + '/' +
+  process.env.OPENSHIFT_APP_NAME;
+}
+
 module.exports = {
   TOKEN_SECRET: process.env.TOKEN_SECRET || 'A hard to guess string',
-  MONGO_URI: process.env.MONGODB_URI || process.env.MONGOLAB_URI || process.env.MONGO_URI || 'mongodb://localhost:27017/test',
+  MONGO_URI: connection_string,
   FACEBOOK_SECRET: process.env.FACEBOOK_SECRET || 'Facebook App Secret',
   FOURSQUARE_SECRET: process.env.FOURSQUARE_SECRET || 'Foursquare Client Secret',
   GOOGLE_SECRET: process.env.GOOGLE_SECRET || 'Google Client Secret',
