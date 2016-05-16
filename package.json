@@ -1,6 +1,6 @@
 {
   "name": "satellizer-server-example",
-  "main": "server.js",
+  "main": "./www",
   "scripts": {
     "postinstall": "./node_modules/bower/bin/bower install",
     "start": "node server.js"
