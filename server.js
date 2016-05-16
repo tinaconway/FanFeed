@@ -54,6 +54,5 @@ app.use('/api/collections', crudRoutes);
  | Start the Server
  |--------------------------------------------------------------------------
  */
-app.listen(app.get('port'), function() {
-  console.log('Express server listening on port ' + app.get('port'));
-});
+
+ module.exports = app;
