@@ -3,15 +3,15 @@
 
 
 #### Technologies
-Angular
-Angular UI
-Bootstrap
-Underscore
-Gulp
-YQL (Yahoo Query Language)
-NG­Auth Boiler Template
-HTML and CSS
-Openshift - RH Cloud
+Angular,
+Angular UI,
+Bootstrap,
+Underscore,
+Gulp,
+YQL (Yahoo Query Language),
+NG­Auth Boiler Template,
+HTML and CSS,
+Openshift - RH Cloud,
 Several RSS feeds (made into JSON via YQL)
 
 
