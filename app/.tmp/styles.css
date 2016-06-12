@@ -75,6 +75,9 @@ h1 {
 .nav-tabs > li > a {
   color: #A70000; }
 
+.red {
+  color: #A70000 !important; }
+
 .navbar {
   border: 0;
   font-size: 2vmax;

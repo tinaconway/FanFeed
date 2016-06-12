@@ -1,7 +1,7 @@
 (function() {
   'use strict';
   angular.module('profile')
-    .factory('Account', function($http) {
+    .factory('accountService', function($http) {
       return {
         getProfile: function() {
           return $http.get('/api/me');

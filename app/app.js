@@ -4,26 +4,25 @@ angular.module('MyApp', [
   'ngSanitize',
   'mgcrea.ngStrap',
   'auth',
-  'profile',
-  'posts',
   'feed',
+  'profile',
   'toaster'
 ])
 
 .config(function($routeProvider) {
   $routeProvider
     .when('/', {
-      templateUrl: 'home/views/home.html',
+      templateUrl: 'feed/feed-tpl.html',
       controller: 'FeedController',
       resolve: {
         checkAuth: function ($auth, $q, $location) {
-          var dfd = $q.defer();
+          var deferred = $q.defer();
           if(!$auth.isAuthenticated()) {
             $location.path('/login');
           } else {
-            dfd.resolve();
+            deferred.resolve();
           }
-          return dfd.promise;
+          return deferred.promise;
 
         }
       }

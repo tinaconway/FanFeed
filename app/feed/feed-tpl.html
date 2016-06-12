@@ -1,0 +1,95 @@
+
+
+<div class="background-image-main">
+    <div>
+        <div id="tabs" class="panel panel-default feed-news">
+            <ul class="feed-ul nav nav-tabs">
+                <li role="presentation" class="tab feed-li" ng-repeat="tab in tabs" ng-class="{active:isActiveTab(tab.url)}" ng-click="goToTab(tab)">{{tab.title}}</li>
+                <input type="text" ng-model="search.title" class="filter" name="name" val="" placeholder="Search" size="40">
+            </ul>
+            <div id="mainView">
+                <div ng-include="currentTab"></div>
+            </div>
+        </div>
+
+        <script type="text/ng-template" id="nfl.tpl.html">
+            <div class="contain">
+                <div id="viewOne" ng-repeat="article in nfl | filter: search:strict | orderBy: 'pubDate':true">
+                    <toaster-container toaster-options="{'time-out': 1000}"></toaster-container>
+                    <button type="button" class="star"><i class="fa" ng-class="{ 'fa-star': article.starred , 'fa-star-o': !article.starred}"  ng-click="add(article)"></i></button>
+                    <a href="{{article.link}}" target="_blank"><h3>{{article.title}}</h3></a>
+                    <p class="views">
+                        {{article.pubDate}}
+                    </p>
+                    <p class="views">{{article.description}}</p>
+                </div>
+            </div>
+        </script>
+
+        <script type="text/ng-template" id="mlb.tpl.html">
+            <div class="contain">
+                <div id="viewTwo" ng-repeat="article in mlb | filter: search:strict | orderBy: 'pubDate':true">
+                    <toaster-container toaster-options="{'time-out': 1000}"></toaster-container>
+                      <button type="button" class="star"><i class="fa" ng-class="{ 'fa-star': article.starred , 'fa-star-o': !article.starred}"  ng-click="add(article)"></i></button>
+                    <a href="{{article.link}} target="_blank""><h3>{{article.title}}</h3></a>
+                    <p class="views">
+                        {{article.pubDate}}
+                    </p>
+                    <p class="views">{{article.description}}</p>
+                </div>
+            </div>
+        </script>
+
+        <script type="text/ng-template" id="nhl.tpl.html">
+            <div class="contain">
+                <div id="viewThree" ng-repeat="article in nhl | filter: search:strict | orderBy: 'pubDate':true">
+                    <toaster-container toaster-options="{'time-out': 1000}"></toaster-container>
+                    <button type="button" class="star"><i class="fa" ng-class="{ 'fa-star': article.starred , 'fa-star-o': !article.starred}"  ng-click="add(article)"></i></button>
+                    <a href="{{article.link}} target="_blank""><h3>{{article.title}}</h3></a>
+                    <p class="views">
+                        {{article.pubDate}}
+                    </p>
+                    <p class="views">{{article.description}}</p>
+                </div>
+            </div>
+        </script>
+
+        <script type="text/ng-template" id="nba.tpl.html">
+            <div class="contain">
+                <div id="viewFour" ng-repeat="article in nba | filter: search:strict | orderBy: 'pubDate':true">
+                    <toaster-container toaster-options="{'time-out': 1000}"></toaster-container>
+                      <button type="button" class="star"><i class="fa" ng-class="{ 'fa-star': article.starred , 'fa-star-o': !article.starred}"  ng-click="add(article)"></i></button>
+                    <a href="{{article.link}} target="_blank""><h3>{{article.title}}</h3></a>
+                    <p class="views">
+                        {{article.pubDate}}
+                    </p>
+                    <p class="views">{{article.description}}</p>
+                </div>
+            </div>
+        </script>
+
+        <script type="text/ng-template" id="extra.tpl.html">
+            <div class="contain">
+                <div id="viewFive" ng-repeat="article in extra | filter: search:strict | orderBy: 'pubDate':true">
+                    <toaster-container toaster-options="{'time-out': 1000}"></toaster-container>
+                    <button type="button" class="star"><i class="fa" ng-class="{ 'fa-star': article.starred , 'fa-star-o': !article.starred}"  ng-click="add(article)"></i></button>
+                    <a href="{{article.link}} target="_blank""><h3>{{article.title}}</h3></a>
+                    <p class="views">
+                        {{article.pubDate}}
+                    </p>
+                    <p class="views">{{article.description}}</p>
+                </div>
+            </div>
+        </script>
+
+        <script type="text/ng-template" id="setup.tpl.html">
+            <div class="contain">
+                <div id="viewSix">
+                    <h3 class="get-started">To get started, add your favorite teams to your <a href="/#/profile" >profile</a>!</h3>
+                </div>
+            </div>
+        </script>
+
+    </div>
+</div>
+</div>
