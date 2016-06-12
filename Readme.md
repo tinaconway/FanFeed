@@ -1,5 +1,5 @@
 # Fan Feed
-​Allow a user to set up preferences of favorite sports teams and generate a feed of news articles from around the web relating to those preferences, so that the user can stay up to date on their favorite teams all in place.
+​Allow a user to set up preferences of their favorite sports teams and generate a feed of news articles from around the web relating to those preferences. The user can then stay up to date on their favorite sports teams all in place.
 
 
 #### Technologies
