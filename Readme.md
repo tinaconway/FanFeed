@@ -1,81 +1,22 @@
-# Angular Auth Demo with Satellizer
-
-This is a simple demo MEAN application that is intended to demonstrate the use of authentication with [Satellizer](https://github.com/sahat/satellizer) with a small nodejs/express backend, but focusing more on the AngularJS side of things.
-
-
-#### [Obtaining Oauth Keys](https://github.com/sahat/satellizer#obtaining-oauth-keys)
-
-Please refer to Satellizer's Documentation to learn how to configure and obtain oauth keys.
-
-#### Angular Modules
+# Fan Feed
+​Allow a user to set up preferences of favorite sports teams and generate a feed of news articles from around the web relating to those preferences, so that the user can stay up to date on their favorite teams all in place.
 
 
+#### Technologies
+Angular
+Angular UI
+Bootstrap
+Underscore
+Gulp
+YQL (Yahoo Query Language)
+NG­Auth Boiler Template
+HTML and CSS
+Openshift - RH Cloud
+Several RSS feeds (made into JSON via YQL)
 
 
-### Running Locally
-- In terminal you need to start mongo => $mongod
-- gulp serve-dev // starts up the server, opens browser and starts livereload 
-
-
-### Deploying to Heroku
-
-- heroku create appName
-- heroku addons:add mongolab
-- git push heroku master 
-
-
-### Directory Structure
-
-``` javascript
-|- app                                  // public folder (angularjs files)
-|  |- vendor/                           // bower components
-|  |- stylesheets/
-|  |- auth/                             // auth feature
-|  | |- directives
-|  | | |- passwordMatch.js
-|  | | |- passwordStrength.js
-|  | |- views/
-|  | | |- login.html
-|  | | |- signup.html
-|  | |- auth.login.js
-|  | |- auth.logout.js
-|  | |- auth.module.js
-|  | |- auth.signup.js
-|  |- posts/                            // posts feature
-|  | |- views/
-|  | | |- create.html
-|  | | |- edit.html
-|  | | |- list.html
-|  | | |- show.html
-|  | |- posts.js
-|  | |- postsController.js
-|  | |- postsServices.js
-|  |- home/                            // home feature
-|  | |- views/
-|  | | |- home.html
-|  | | |- navbar.html
-|  | |- navbar.js
-|  |- profile/                        // profile feature
-|  | |- views/
-|  | | |- profile.html
-|  | |- profile.accountService.js
-|  | |- profile.controller.js
-|  | |- profile.module.js
-|  |- app.js                         // main angular application module
-|  |- index.html
-|- routes
-|  |- apiCrud.js
-|  |- auth.js
-|  |- helpers.js
-|  |- profile.js
-|- entities
-|  |- User.js
-|- .bowerrc                           // tells bower where to install dependencies
-|- .gitignore
-|- config.js                        // All the server side environment secrets
-|- server.js                       // main nodejs app file
-|- bower.json
-|- package.json
-|- Procfile
-
-```
+### Features
+(1) User Auth ­- Create account / login
+(2) Setup preferences -­ Ability to add teams from NFL, MLB, NBA, & NHL
+(3) News Feed ­ - with tabs to look at news from individual leagues
+(4) Star Articles -­ save articles to collection
