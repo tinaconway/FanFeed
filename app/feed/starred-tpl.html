@@ -1,0 +1,22 @@
+<div class="background-image-main">
+    <div class="panel panel-default feed-news">
+        <ul class="feed-ul nav nav-tabs">
+            <div class="center-title">
+                <li role="presentation" class="starred-title">
+                    Starred Articles
+                </li>
+            </div>
+            <input type="text" ng-model="search.title" class="filter" name="name" val="" placeholder="Search" size="40">
+        </ul>
+        <div class="contain">
+            <div id="viewOne" ng-repeat="article in starred| filter: search:strict | orderBy: 'pubDate':true">
+                <i class="fa fa-trash-o star growStar" ng-click="delete(article, idx)"></i>
+                <a href="{{article.link}}"><h3>{{article.title}}</h3></a>
+                <p class="views">
+                    {{article.pubDate}}
+                </p>
+                <p class="views">{{article.description}}</p>
+            </div>
+        </div>
+    </div>
+</div>

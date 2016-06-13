@@ -47,14 +47,14 @@ h1 {
 
 .background-image {
   font-family: 'Source Sans Pro', sans-serif;
-  background: url("http://bavconsulting.com/wp-content/uploads/2014/02/sports-fan-2.jpg") no-repeat center center fixed;
+  background: url("../bg.jpg") no-repeat center center fixed;
   background-size: cover;
   padding-bottom: 30px;
   height: 100%; }
 
 .background-image-main {
   font-family: 'Source Sans Pro', sans-serif;
-  background: url("http://bavconsulting.com/wp-content/uploads/2014/02/sports-fan-2.jpg") no-repeat center center fixed;
+  background: url("../bg.jpg") no-repeat center center fixed;
   background-size: cover;
   height: 800px; }
 
@@ -74,6 +74,9 @@ h1 {
 
 .nav-tabs > li > a {
   color: #A70000; }
+
+.red {
+  color: #A70000 !important; }
 
 .navbar {
   border: 0;

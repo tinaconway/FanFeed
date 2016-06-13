@@ -2,78 +2,73 @@
 <html ng-app="MyApp">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FanFeed</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FanFeed</title>
 
-<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,300italic' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Wire+One' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-  <link href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
-  <link href="vendor/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
-  <link href="//cdn.jsdelivr.net/animatecss/3.2.0/animate.css" rel="stylesheet">
-  <link href="vendor/octicons/octicons/octicons.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,300italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Wire+One' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+    <link href="vendor/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="//cdn.jsdelivr.net/animatecss/3.2.0/animate.css" rel="stylesheet">
+    <link href="vendor/octicons/octicons/octicons.css" rel="stylesheet">
 
-  <!-- bower:css -->
-  <link rel="stylesheet" href="vendor/angularjs-toaster/toaster.css" />
-  <!-- endbower -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="vendor/angularjs-toaster/toaster.css" />
+    <!-- endbower -->
 
-  <!-- inject:css -->
-  <link rel="stylesheet" href=".tmp/styles.css">
-  <!-- endinject -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href=".tmp/styles.css">
+    <!-- endinject -->
 
 </head>
 
 <body>
 
-  <ng-include src="'home/views/navbar.html'"></ng-include>
+    <ng-include src="'navbar/navbar-tpl.html'"></ng-include>
 
-  <div ng-view class="fadeZoom"></div>
-
-
-  <!-- bower:js -->
-  <script src="vendor/jquery/dist/jquery.js"></script>
-  <script src="vendor/angular/angular.js"></script>
-  <script src="vendor/angular-animate/angular-animate.js"></script>
-  <script src="vendor/angular-messages/angular-messages.js"></script>
-  <script src="vendor/angular-route/angular-route.js"></script>
-  <script src="vendor/angular-strap/dist/angular-strap.js"></script>
-  <script src="vendor/angular-strap/dist/angular-strap.tpl.js"></script>
-  <script src="vendor/satellizer/satellizer.js"></script>
-  <script src="vendor/angular-sanitize/angular-sanitize.js"></script>
-  <script src="vendor/lodash/lodash.js"></script>
-  <script src="vendor/angular-google-maps/dist/angular-google-maps.js"></script>
-  <script src="vendor/bootstrap/dist/js/bootstrap.js"></script>
-  <script src="vendor/checklist-model/checklist-model.js"></script>
-  <script src="vendor/moment/moment.js"></script>
-  <script src="vendor/angularjs-toaster/toaster.js"></script>
-  <!-- endbower -->
+    <div ng-view class="fadeZoom"></div>
 
 
-  <!-- Application Code -->
-  <!-- inject:js -->
-  <script src="auth/auth.module.js"></script>
-  <script src="auth/directives/passwordStrength.js"></script>
-  <script src="auth/directives/passwordMatch.js"></script>
-  <script src="profile/profile.directive.js"></script>
-  <script src="profile/profile.module.js"></script>
-  <script src="profile/profile.controller.js"></script>
-  <script src="profile/profile.accountService.js"></script>
-  <script src="posts/posts.module.js"></script>
-  <script src="posts/posts.postService.js"></script>
-  <script src="posts/posts.controller.js"></script>
-  <script src="app.module.js"></script>
-  <script src="home/navbar.js"></script>
-  <script src="feed/feed.module.js"></script>
-  <script src="feed/feed.services.js"></script>
-  <script src="feed/feed.controller.js"></script>
-  <script src="controllers/navbar.js"></script>
-  <script src="auth/auth.signup.js"></script>
-  <script src="auth/auth.logout.js"></script>
-  <script src="auth/auth.login.js"></script>
-  <!-- endinject -->
+    <!-- bower:js -->
+    <script src="vendor/jquery/dist/jquery.js"></script>
+    <script src="vendor/angular/angular.js"></script>
+    <script src="vendor/angular-animate/angular-animate.js"></script>
+    <script src="vendor/angular-messages/angular-messages.js"></script>
+    <script src="vendor/angular-route/angular-route.js"></script>
+    <script src="vendor/angular-strap/dist/angular-strap.js"></script>
+    <script src="vendor/angular-strap/dist/angular-strap.tpl.js"></script>
+    <script src="vendor/satellizer/satellizer.js"></script>
+    <script src="vendor/angular-sanitize/angular-sanitize.js"></script>
+    <script src="vendor/lodash/lodash.js"></script>
+    <script src="vendor/angular-google-maps/dist/angular-google-maps.js"></script>
+    <script src="vendor/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="vendor/checklist-model/checklist-model.js"></script>
+    <script src="vendor/moment/moment.js"></script>
+    <script src="vendor/angularjs-toaster/toaster.js"></script>
+    <!-- endbower -->
+
+
+    <!-- Application Code -->
+    <!-- inject:js -->
+    <script src="auth/auth-module.js"></script>
+    <script src="auth/directives/passwordStrength.js"></script>
+    <script src="auth/directives/passwordMatch.js"></script>
+    <script src="profile/profile-module.js"></script>
+    <script src="profile/profile-service.js"></script>
+    <script src="profile/profile-ctrl.js"></script>
+    <script src="app.js"></script>
+    <script src="navbar/navbar-ctrl.js"></script>
+    <script src="feed/feed-module.js"></script>
+    <script src="feed/feed-service.js"></script>
+    <script src="feed/feed-ctrl.js"></script>
+    <script src="auth/signup-ctrl.js"></script>
+    <script src="auth/logout-ctrl.js"></script>
+    <script src="auth/login-ctrl.js"></script>
+    <!-- endinject -->
 </body>
 
 </html>

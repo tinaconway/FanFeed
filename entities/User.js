@@ -3,7 +3,6 @@ var bcrypt = require('bcryptjs');
 
 var userSchema = new mongoose.Schema({
   // add any additional properties here as well as routes/auth.js and routes/profile.js
-  // newProperty: String,
   email: { type: String, unique: true, lowercase: true },
   password: { type: String, select: false },
   displayName: String,
@@ -16,11 +15,11 @@ var userSchema = new mongoose.Schema({
   live: String,
   yahoo: String,
   twitter: String,
-  favoriteNFL: Array,
-  favoriteMLB: Array,
-  favoriteNHL: Array,
-  favoriteNBA: Array,
-  favoriteExtra: Array
+  nfl: Array,
+  mlb: Array,
+  nhl: Array,
+  nba: Array,
+  extra: Array
 });
 
 userSchema.pre('save', function(next) {
